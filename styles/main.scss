@@ -1,0 +1,224 @@
+@import "../code/bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../code/bower_components/neat/app/assets/stylesheets/neat";
+
+body {
+  background: rgba(181, 144, 255, 0.3);
+  font-family: 'Montserrat', sans-serif;
+}
+div.header-fill {
+  background: #A64A54;
+  height: 20px;
+}
+div.wrapper {
+  background: #A64A54 url('../images/comp2.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  // margin-top: 20px;
+  // margin: 0 auto;
+}
+header {
+  margin: 0 auto;
+  margin-right: 55%;
+  padding-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+
+  div {
+    // float:left;
+  }
+  h1,
+  h2 {
+    color: #A64A54;
+    margin: 0 auto;
+  }
+  nav {
+    margin-top: 20px;
+    a {
+      color: #892D38;
+      text-decoration: none;
+      font-size: .7em;
+      text-align: center;
+      font-weight: 500;
+      padding: 10px 5px;
+      transition: all 0.1s ease-in-out;
+      &:hover {
+        font-weight: bold;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    display:block;
+    clear: both;
+  }
+}
+
+main {
+  @include outer-container;
+  section.bio {
+    @include span-columns(4 of 12);
+    float: left;
+    color: white;
+    margin-top: 60px;
+    padding-left: 30px;
+    h2 {
+      color: white;
+      span {
+        font-family: 'Parisienne', cursive;
+        font-size: 2em;
+      }
+    }
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: .1em;
+      line-height: 1.4em;
+      color: #892D38;
+    }
+  }
+}
+
+section.about {
+  @include span-columns(12 of 12);
+  border-top: 20px solid #892D38;
+  background: #A64A54;
+  color: white;
+  position: static;
+  h2 {
+    margin: 0;
+    // text-align: center;
+  }
+  span {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em;
+    // color: #63111B;
+  }
+  div.about {
+    @include span-columns(6 of 12);
+    margin: 30px 50px;
+    // text-align: center;
+    p {
+      margin: 30px 0;
+      float: none;
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+      }
+    }
+    .fa {
+      font-size: 2.5em;
+      margin-right: 5px;
+    }
+  }
+  div.image {
+    @include span-columns(5 of 12);
+    text-align: center;
+    img {
+      height: 250px;
+      // width: 200px;
+      margin-top: 250px;
+      border-radius: 50px;
+      border: 3px solid #892D38;
+    }
+  }
+}
+
+section.resume {
+  @include span-columns(12 of 12);
+  border-top: 20px solid #892D38;
+  background: #F2B3BA;
+  span {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em;
+    color: #63111B;
+    margin-left: 30px;
+  }
+  div.resume {
+    @include span-columns(10 of 12);
+    margin: 5% 8%;
+    color: #63111B;
+    border: 1px solid #A64A54;
+    background: white;
+    opacity: 0.75;
+    padding: 25px 50px;
+    h1 {
+      color: #63111B;
+      font-size: 2.4em;
+      text-transform: uppercase;
+      display: inline-block;
+      float:left;
+    }
+    h2 {
+      display: inline-block;
+      float:left;
+      margin: 38px 0 0 30px;
+      font-weight: 200;
+    }
+    p {
+      font-size: 0.8em;
+      margin: 5px;
+      clear: left;
+    }
+    a {
+      text-decoration: none;
+      color: #A64A54;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: lighter;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+    div.content {
+      margin-top: 60px;
+    }
+    section.experience {
+      @include span-columns(6 of 10);
+        // margin-right: 30px;
+        padding-right: 35px;
+      h2 {
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      p {
+        margin: 10px 0;
+        font-weight: 200;
+      }
+      ul {
+        margin: 0 0 30px;
+        padding: 0 15px;
+        // list-style-type: none;
+        li {
+          color: #A64A54;
+          font-size: .9em;
+        }
+      }
+    }
+    section.skills {
+      @include span-columns(4 of 10);
+      // background: white;
+      ul {
+        margin: 0;
+        padding: 0 15px;
+        // list-style-type: none;
+        li {
+          color: #A64A54;
+        }
+      }
+      p {
+        color: #A64A54;
+        font-size: .9em;
+      }
+      .info {
+        color: #63111B;
+      }
+    }
+  }
+}

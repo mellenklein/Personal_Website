@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  background: rgba(181, 144, 255, 0.3);
+  font-family: 'Montserrat', sans-serif; }
+
+div.header-fill {
+  background: #A64A54;
+  height: 20px; }
+
+div.wrapper {
+  background: #A64A54 url("../images/comp2.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 200px;
+  padding-top: 100px; }
+
+header {
+  margin: 0 auto;
+  margin-right: 55%;
+  padding-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5em; }
+  header h1,
+  header h2 {
+    color: #A64A54;
+    margin: 0 auto; }
+  header nav {
+    margin-top: 20px; }
+    header nav a {
+      color: #892D38;
+      text-decoration: none;
+      font-size: .7em;
+      text-align: center;
+      font-weight: 500;
+      padding: 10px 5px;
+      transition: all 0.1s ease-in-out; }
+      header nav a:hover {
+        font-weight: bold;
+        transition: all 0.1s ease-in-out; }
+  header::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+main {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
+  main section.bio {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    float: left;
+    color: white;
+    margin-top: 60px;
+    padding-left: 30px; }
+    main section.bio:last-child {
+      margin-right: 0; }
+    main section.bio h2 {
+      color: white; }
+      main section.bio h2 span {
+        font-family: 'Parisienne', cursive;
+        font-size: 2em; }
+    main section.bio p {
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: .1em;
+      line-height: 1.4em;
+      color: #892D38; }
+
+section.about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-top: 20px solid #892D38;
+  background: #A64A54;
+  color: white;
+  position: static; }
+  section.about:last-child {
+    margin-right: 0; }
+  section.about h2 {
+    margin: 0; }
+  section.about span {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em; }
+  section.about div.about {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin: 30px 50px; }
+    section.about div.about:last-child {
+      margin-right: 0; }
+    section.about div.about p {
+      margin: 30px 0;
+      float: none; }
+      section.about div.about p a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800; }
+    section.about div.about .fa {
+      font-size: 2.5em;
+      margin-right: 5px; }
+  section.about div.image {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    text-align: center; }
+    section.about div.image:last-child {
+      margin-right: 0; }
+    section.about div.image img {
+      height: 250px;
+      margin-top: 250px;
+      border-radius: 50px;
+      border: 3px solid #892D38; }
+
+section.resume {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-top: 20px solid #892D38;
+  background: #F2B3BA; }
+  section.resume:last-child {
+    margin-right: 0; }
+  section.resume span {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em;
+    color: #63111B;
+    margin-left: 30px; }
+  section.resume div.resume {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin: 5% 8%;
+    color: #63111B;
+    border: 1px solid #A64A54;
+    background: white;
+    opacity: 0.75;
+    padding: 25px 50px; }
+    section.resume div.resume:last-child {
+      margin-right: 0; }
+    section.resume div.resume h1 {
+      color: #63111B;
+      font-size: 2.4em;
+      text-transform: uppercase;
+      display: inline-block;
+      float: left; }
+    section.resume div.resume h2 {
+      display: inline-block;
+      float: left;
+      margin: 38px 0 0 30px;
+      font-weight: 200; }
+    section.resume div.resume p {
+      font-size: 0.8em;
+      margin: 5px;
+      clear: left; }
+    section.resume div.resume a {
+      text-decoration: none;
+      color: #A64A54; }
+    section.resume div.resume h3 {
+      text-transform: uppercase;
+      font-weight: lighter;
+      font-size: 1.3em;
+      margin-bottom: 10px; }
+    section.resume div.resume div.content {
+      margin-top: 60px; }
+    section.resume div.resume section.experience {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 58.86297%;
+      padding-right: 35px; }
+      section.resume div.resume section.experience:last-child {
+        margin-right: 0; }
+      section.resume div.resume section.experience h2 {
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-top: 20px;
+        font-weight: bold; }
+      section.resume div.resume section.experience p {
+        margin: 10px 0;
+        font-weight: 200; }
+      section.resume div.resume section.experience ul {
+        margin: 0 0 30px;
+        padding: 0 15px; }
+        section.resume div.resume section.experience ul li {
+          color: #A64A54;
+          font-size: .9em; }
+    section.resume div.resume section.skills {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 38.29445%; }
+      section.resume div.resume section.skills:last-child {
+        margin-right: 0; }
+      section.resume div.resume section.skills ul {
+        margin: 0;
+        padding: 0 15px; }
+        section.resume div.resume section.skills ul li {
+          color: #A64A54; }
+      section.resume div.resume section.skills p {
+        color: #A64A54;
+        font-size: .9em; }
+      section.resume div.resume section.skills .info {
+        color: #63111B; }
