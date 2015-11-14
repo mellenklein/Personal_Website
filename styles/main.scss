@@ -168,6 +168,18 @@ section.resume {
       text-decoration: none;
       color: #A64A54;
     }
+    ul.contact {
+      li {
+        float: none;
+        width: 100%;
+        a{
+          font-family: 'Montserrat', sans-serif;
+          padding-left: 5px;
+          text-decoration: none;
+          color: #A64A54;
+        }
+      }
+    }
     h3 {
       text-transform: uppercase;
       font-weight: lighter;
@@ -214,10 +226,11 @@ section.resume {
       }
       p {
         color: #A64A54;
-        font-size: .9em;
+        font-size: .8em;
       }
       .info {
         color: #63111B;
+        font-size: 1em;
       }
     }
   }
