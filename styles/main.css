@@ -1,3 +1,4 @@
+@import url(../code/bower_components/normalize-css/normalize.css);
 html {
   box-sizing: border-box; }
 
@@ -7,7 +8,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: rgba(181, 144, 255, 0.3);
+  background: #A64A54;
   font-family: 'Montserrat', sans-serif; }
 
 div.header-fill {
@@ -15,11 +16,13 @@ div.header-fill {
   height: 20px; }
 
 div.wrapper {
-  background: #A64A54 url("../images/comp2.jpg") no-repeat;
-  background-position: center;
+  position: relative;
+  background: #A64A54 url("../images/bg1.jpg") no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
-  padding-top: 100px; }
+  padding-top: 100px;
+  top: 0;
+  z-index: -1; }
 
 header {
   margin: 0 auto;
@@ -31,9 +34,16 @@ header {
   header h1,
   header h2 {
     color: #A64A54;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: absolute;
+    top: 80px;
+    left: 350px; }
   header nav {
-    margin-top: 20px; }
+    margin-top: 20px;
+    z-index: 999;
+    position: absolute;
+    top: 120px;
+    left: 340px; }
     header nav a {
       color: #892D38;
       text-decoration: none;
@@ -53,33 +63,36 @@ header {
 main {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative;
+  z-index: 1; }
   main::after {
     clear: both;
     content: "";
     display: table; }
-  main section.bio {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    float: left;
-    color: white;
-    margin-top: 60px;
-    padding-left: 30px; }
-    main section.bio:last-child {
-      margin-right: 0; }
-    main section.bio h2 {
-      color: white; }
-      main section.bio h2 span {
-        font-family: 'Parisienne', cursive;
-        font-size: 2em; }
-    main section.bio p {
-      font-size: 1em;
-      font-weight: 500;
-      letter-spacing: .1em;
-      line-height: 1.4em;
-      color: #892D38; }
+
+section.bio {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  float: left;
+  color: white;
+  margin-top: 230px;
+  padding-left: 50px; }
+  section.bio:last-child {
+    margin-right: 0; }
+  section.bio h2 {
+    color: white; }
+    section.bio h2 span {
+      font-family: 'Parisienne', cursive;
+      font-size: 2em; }
+  section.bio p {
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: 1.4em;
+    color: #892D38; }
 
 section.about {
   float: left;
@@ -89,7 +102,8 @@ section.about {
   border-top: 20px solid #892D38;
   background: #A64A54;
   color: white;
-  position: static; }
+  position: static;
+  z-index: 1; }
   section.about:last-child {
     margin-right: 0; }
   section.about h2 {
@@ -128,6 +142,145 @@ section.about {
       margin-top: 250px;
       border-radius: 50px;
       border: 3px solid #892D38; }
+
+section.portfolio {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-top: 20px solid #892D38;
+  background: #A64A54;
+  color: #A64A54;
+  position: relative;
+  margin: 0 auto;
+  height: 0;
+  z-index: 1; }
+  section.portfolio:last-child {
+    margin-right: 0; }
+  section.portfolio h2 {
+    margin: 20px 90px; }
+  section.portfolio span {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em; }
+  section.portfolio div.portfolio {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 150px;
+    margin-top: 30px;
+    z-index: 1;
+    height: 100%;
+    position: static; }
+    section.portfolio div.portfolio:last-child {
+      margin-right: 0; }
+    section.portfolio div.portfolio::after {
+      content: "";
+      display: block;
+      clear: both; }
+    section.portfolio div.portfolio article.show,
+    section.portfolio div.portfolio article.hide {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 28.01019%;
+      border: 1px solid white;
+      border-radius: 100px;
+      z-index: 1;
+      position: static;
+      margin: 30px 10px;
+      text-align: center;
+      background-size: contain; }
+      section.portfolio div.portfolio article.show:last-child,
+      section.portfolio div.portfolio article.hide:last-child {
+        margin-right: 0; }
+    section.portfolio div.portfolio article.show {
+      height: 240px;
+      padding: 80px 0; }
+      section.portfolio div.portfolio article.show h2 {
+        color: #A64A54;
+        margin: 20px 0;
+        font-size: 2em;
+        border: 1px solid #BFBFBF;
+        border-radius: 100px;
+        background: rgba(250, 250, 250, 0.8);
+        transition: color 0.5s ease, background 0.5s ease; }
+        section.portfolio div.portfolio article.show h2:hover {
+          color: #892D38;
+          cursor: pointer;
+          background: white;
+          transition: color 0.5s ease, background 0.5s ease; }
+      section.portfolio div.portfolio article.show p {
+        display: none; }
+    section.portfolio div.portfolio article.show#twt {
+      background: #55ACEE url("../images/twt-bw.jpg") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.show#todo {
+      background: #93D189 url("../images/todo-bw.jpg") repeat-x center center;
+      background-size: 50%; }
+    section.portfolio div.portfolio article.show#calc {
+      background: #AA5585 url("../images/calc-bw.jpg") repeat-x center center;
+      background-size: 80%; }
+    section.portfolio div.portfolio article.show#gh {
+      background: #4078C0 url("../images/github-bw.jpg") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.show#sk8 {
+      background: #CB7461 url("../images/sk8-bw.jpg") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.show#tshirt {
+      background: #B39E77 url("../images/tshirt-bw.jpg") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide {
+      height: 240px;
+      padding: 50px 0;
+      overflow: hidden; }
+      section.portfolio div.portfolio article.hide h2 {
+        display: none; }
+      section.portfolio div.portfolio article.hide p {
+        border: 1px solid #BFBFBF;
+        background: #892D38;
+        border-radius: 100px;
+        padding: 0; }
+        section.portfolio div.portfolio article.hide p a {
+          text-decoration: none;
+          color: rgba(250, 250, 250, 0.7);
+          font-size: 2em;
+          transition: color 0.5s ease; }
+          section.portfolio div.portfolio article.hide p a:hover {
+            color: white;
+            cursor: pointer;
+            transition: color 0.5s ease; }
+    section.portfolio div.portfolio article.hide#twt {
+      background: #55ACEE url("https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide#todo {
+      background: #8DC785 url("https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif") repeat-x center center;
+      background-position-y: 30px;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide#calc {
+      background: #AA5585 url("https://i.gyazo.com/70fef86f8bc7e3fe5db3926f2694c486.gif") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide#gh {
+      float: left;
+      background: #4078C0 url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide#sk8 {
+      background: #CDCDCD url("http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif") repeat-x center center;
+      background-size: contain; }
+    section.portfolio div.portfolio article.hide#tshirt {
+      background: #B39E77 url("../images/tshirt.png") repeat-x center center;
+      background-size: contain; }
+
+div#parallax1 {
+  position: relative;
+  background: #A64A54 url("../images/st-img.jpg") no-repeat top center;
+  background-position: 45% 0%;
+  background-size: cover;
+  padding-bottom: 750px;
+  padding-top: 80px;
+  top: 0;
+  height: 100%;
+  z-index: -1; }
 
 section.resume {
   float: left;
@@ -229,3 +382,83 @@ section.resume {
       section.resume div.resume section.skills .info {
         color: #63111B;
         font-size: 1em; }
+
+@media (max-width: 995px) {
+  div.heading h1 {
+    left: 300px; }
+  header nav {
+    left: 280px; }
+  section.portfolio article.show h2 {
+    font-size: 1em; }
+  section#resume div.resume {
+    padding: 25px 40px; }
+    section#resume div.resume h1 {
+      text-align: center;
+      float: none;
+      display: block; }
+    section#resume div.resume h2.resumeTitle {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      text-align: center; }
+    section#resume div.resume p.contact {
+      text-align: center; }
+    section#resume div.resume p.info {
+      font-size: .94em; } }
+
+@media (max-width: 995px) {
+  div.heading h1 {
+    left: 300px; }
+  header nav {
+    left: 280px; }
+  section.portfolio div.portfolio article.show h2 {
+    font-size: 1.5em; }
+  section.portfolio div.portfolio p {
+    font-size: .75em; }
+  section#resume div.resume {
+    padding: 25px 40px; }
+    section#resume div.resume h1 {
+      text-align: center;
+      float: none;
+      display: block; }
+    section#resume div.resume h2.resumeTitle {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      text-align: center; }
+    section#resume div.resume p.contact {
+      text-align: center; }
+    section#resume div.resume p.info {
+      font-size: .94em; } }
+
+@media (max-width: 920px) {
+  section.bio h2 {
+    font-size: 1.2em; }
+  section#about {
+    margin: 0; }
+    section#about div.about {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin: 0 25%;
+      display: block;
+      width: 50%;
+      text-align: center; }
+      section#about div.about:last-child {
+        margin-right: 0; }
+      section#about div.about h2 {
+        margin: 30px; }
+    section#about div.image {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center;
+      width: 50%;
+      margin: 40px 25%;
+      display: block; }
+      section#about div.image:last-child {
+        margin-right: 0; }
+      section#about div.image img {
+        margin: 0; } }

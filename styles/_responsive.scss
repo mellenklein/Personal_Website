@@ -1,0 +1,37 @@
+@media (max-width: 995px) {
+div.heading {
+  h1 {
+    left: 300px;
+  }
+}
+header nav {
+  left: 280px;
+}
+section.portfolio {
+  article.show h2 {
+    font-size: 1em;
+  }
+}
+section#resume {
+  div.resume {
+    padding: 25px 40px;
+    h1 {
+      text-align: center;
+      float: none;
+      display: block;
+    }
+    h2.resumeTitle {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+    }
+    p.contact {
+      text-align: center;
+    }
+    p.info {
+      font-size: .94em;
+    }
+  }
+ }
+}

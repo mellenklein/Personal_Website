@@ -5,14 +5,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/main.css" media="screen">
     <title>Mary Ellen Klein | Front End Developer</title>
     <link rel="stylesheet"     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="header-fill"></div>
-    <div class="wrapper">
-    <main>
     <header class="clearfix">
       <div class="heading">
         <h1>Mary Ellen Klein</h1>
@@ -20,20 +19,23 @@
       </div>
       <nav>
         <a href="#about">About</a>
-        <a href="#resume">Resumé</a>
-        <a href="https://github.com/mellenklein?tab=repositories">Code</a>
-        <a href="https://medium.com/@maryellenklein">Blog</a>
-        <a href="https://melonandthemayhem.bandcamp.com">Music</a>
+        <a href="#resume">Résumé</a>
+        <a href="#portfolio">Code</a>
+        <a href="https://medium.com/@maryellenklein" target="_blank">Blog</a>
+        <a href="https://melonandthemayhem.bandcamp.com" target="_blank">Music</a>
       </nav>
     </header>
-      <section class="bio">
+    <section class="bio">
         <h2>< <span>hello world</span> ></h2>
         <p>
           I am a Front End Developer with a taste for aesthetics, focusing on building responsive and user-friendly experiences with clean, elegant code. Lover of JavaScript, HTML, CSS, jQuery and JS frameworks.
         </p>
       </section>
+    <div class="wrapper" id="parallax">
+      <main>
       </main>
     </div>
+
     <section id="about" class="about">
       <div class="about">
         <h2>< <span>about</span> ></h2>
@@ -59,17 +61,58 @@
         </p>
       </div>
       <div class="image">
-        <img src="../images/comp3.jpg" alt="headshot" />
+        <img src="../images/about.jpg" alt="headshot" />
       </div>
     </section>
 
+
+    <section class="portfolio" id="portfolio">
+      <h2>< <span>portfolio</span> ></h2>
+      <div class="portfolio">
+        <article class="show" id="twt">
+          <h2>Twitter Clone</h2>
+          <p><a href="http://mellenklein.github.io/Twitter_Clone_React.js" target="_blank"> Project</a></p>
+          <p><a href="https://github.com/mellenklein/Twitter_Clone_React.js" target="_blank"> Source code</a></p>
+        </article>
+        <article class="show" id="todo">
+          <h2>To Do List</h2>
+          <p><a href="http://mellenklein.github.io/To_Do_List_Backbone.js/" target="_blank">Project</a></p>
+          <p><a href="https://github.com/mellenklein/To_Do_List_Backbone.js" target="_blank">Source code</a></p>
+        </article>
+        <article class="show" id="calc">
+          <h2>Calculator</h2>
+          <p><a href="http://mellenklein.github.io/Calculator_Project/" target="_blank">Project</a></p>
+          <p><a href="https://github.com/mellenklein/Calculator_Project" target="_blank">Source code</a></p>
+        </article>
+        <article class="show" id="gh">
+          <h2>GitHub Clone</h2>
+          <p><a href="http://mellenklein.github.io/GitHub_Clone_AJAX_Practice" target="_blank">Project</a></p>
+          <p><a href="https://github.com/mellenklein/GitHub_Clone_AJAX_Practice" target="_blank">Source code</a></p>
+        </article>
+        <article class="show" id="sk8">
+          <h2>Skate Shop</h2>
+          <p><a href="http://mellenklein.github.io/Skateboarding_Site_Layout/" target="_blank">Project</a></p>
+          <p><a href="https://github.com/mellenklein/Skateboarding_Site_Layout" target="_blank">Source code</a></p>
+        </article>
+        <article class="show" id="tshirt">
+          <h2>T-Shirt Shop</h2>
+          <p><a href="http://mellenklein.github.io/T-Shirt_Shop_Site/" target="_blank">Project</a></p>
+          <p><a href="https://github.com/mellenklein/T-Shirt_Shop_Site" target="_blank">Source code</a></p>
+        </article>
+      </div>
+    </section>
+    <div class="wrapper" id="parallax1">
+      <main>
+      </main>
+    </div>
+
     <section class="resume" id="resume">
-      <h2><span>Resumé</span></h2>
+      <h2><span>Résumé</span></h2>
       <div class="resume">
         <h1>Mary Ellen Klein</h1>
-        <h2>Front End Web Developer</h2>
-        <p>2429 Melbourne Drive • Nashville, TN 37214</p>
-        <p><a href="mailto:maryellenklein@gmail.com">maryellenklein@gmail.com</a> • <a href="http://www.maryellenklein.com">maryellenklein.com</a></p>
+        <h2 class="resumeTitle">Front End Web Developer</h2>
+        <p class="contact">2429 Melbourne Drive • Nashville, TN 37214</p>
+        <p class="contact"><a href="mailto:maryellenklein@gmail.com">maryellenklein@gmail.com</a> • <a href="http://www.maryellenklein.com">maryellenklein.com</a></p>
 
       <div class="content">
         <section class="experience">
@@ -96,10 +139,10 @@
           </ul>
           <h3>Contact: </h3>
           <ul class="contact">
-            <li class="fa fa-twitter-square"><a href="https://twitter.com/mellenklein">@mellenklein</a></li>
-            <li class="fa fa-github-square"><a href="https://github.com/mellenklein?tab=repositories">/mellenklein</a></li>
-            <li class="fa fa-envelope"><a href="mailto:maryellenklein@gmail.com">maryellenklein@gmail.com</a></li>
-            <li class="fa fa-medium"><a href="https://medium.com/@maryellenklein">@maryellenklein</a></li>
+            <li class="fa fa-twitter-square"><a href="https://twitter.com/mellenklein" target="_blank">@mellenklein</a></li>
+            <li class="fa fa-github-square"><a href="https://github.com/mellenklein?tab=repositories" target="_blank">/mellenklein</a></li>
+            <li class="fa fa-envelope"><a href="mailto:maryellenklein@gmail.com" target="_blank">maryellenklein@gmail.com</a></li>
+            <li class="fa fa-medium"><a href="https://medium.com/@maryellenklein" target="_blank">@maryellenklein</a></li>
           </ul>
 
 
@@ -134,7 +177,7 @@
           <h3 class="community">Community</h3>
           <p>• Nash.js - member</p>
           <p>• Nashville Women Programmers - member</p>
-          <p>• Node.js - volunteer</p>
+          <p>• Nodevember Conference - volunteer</p>
         </section>
        </div>
       </div>
