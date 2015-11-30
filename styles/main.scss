@@ -4,16 +4,16 @@
 @import "../code/bower_components/neat/app/assets/stylesheets/neat";
 
 body {
-  background: #A64A54;
+  background: $carnation;
   font-family: 'Montserrat', sans-serif;
 }
 div.header-fill {
-  background: #A64A54;
+  background: $carnation;
   height: 20px;
 }
 div.wrapper {
   position: relative;
-  background: #A64A54 url('../images/bg1.jpg') no-repeat top center;
+  background: $carnation url('../images/bg1.jpg') no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
   padding-top: 100px;
@@ -34,7 +34,7 @@ header {
   }
   h1,
   h2 {
-    color: #A64A54;
+    color: $carnation;
     margin: 0 auto;
     position: absolute;
     top: 80px;
@@ -47,7 +47,7 @@ header {
     top: 120px;
     left: 340px;
     a {
-      color: #892D38;
+      color: $merlot;
       text-decoration: none;
       font-size: .7em;
       text-align: center;
@@ -91,15 +91,16 @@ section.bio {
       font-weight: 500;
       letter-spacing: .1em;
       line-height: 1.4em;
-      color: #892D38;
+      color: $merlot;
     }
 }
 
 
 section.about {
   @include span-columns(12 of 12);
-  border-top: 20px solid #892D38;
-  background: #A64A54;
+  border-top: 20px solid $merlot;
+  border-bottom: 20px solid $merlot;
+  background: $carnation;
   color: white;
   position: static;
   z-index: 1;
@@ -110,7 +111,6 @@ section.about {
   span {
     font-family: 'Parisienne', cursive;
     font-size: 2em;
-    // color: #63111B;
   }
   div.about {
     @include span-columns(6 of 12);
@@ -138,22 +138,23 @@ section.about {
       // width: 200px;
       margin-top: 250px;
       border-radius: 50px;
-      border: 3px solid #892D38;
+      border: 3px solid $merlot;
     }
   }
 }
 
 section.portfolio {
-  @include span-columns(12 of 12);
-  border-top: 20px solid #892D38;
-  background: #A64A54;
-  color: #A64A54;
-  position: relative;
+  @include outer-container;
+  border-top: 20px solid $merlot;
+  background: $carnation;
+  color: $carnation;
+  // position: relative;
   margin: 0 auto;
   height: 0;
   z-index: 1;
   h2 {
-    margin: 20px 90px;
+    margin: 30px;
+    color: $merlot;
   }
   span {
     font-family: 'Parisienne', cursive;
@@ -161,20 +162,15 @@ section.portfolio {
   }
 
   div.portfolio {
-    @include span-columns(10 of 12);
-    margin-left: 150px;
-    margin-top: 30px;
+    @include span-columns(12 of 12);
+    margin: 30px 0;
+    margin-left: 0;
     z-index: 1;
     height: 100%;
-    position: static;
-    &::after {
-      content: "";
-      display: block;
-      clear:both;
-    }
+
     article.show,
     article.hide {
-      @include span-columns(3 of 10);
+      @include span-columns(3 of 12);
       border: 1px solid white;
       border-radius: 100px;
       z-index: 1;
@@ -182,12 +178,13 @@ section.portfolio {
       margin: 30px 10px;
       text-align: center;
       background-size: contain;
+      width: 30%;
     }
     article.show {
       height: 240px;
       padding: 80px 0;
       h2 {
-        color: #A64A54;
+        color: $carnation;
         margin: 20px 0;
         font-size: 2em;
         border: 1px solid $gray;
@@ -195,7 +192,7 @@ section.portfolio {
         background: rgba(250, 250, 250, 0.8);
         transition: color .5s ease, background .5s ease;
         &:hover {
-          color: #892D38;
+          color: $merlot;
           cursor: pointer;
           background: white;
           transition: color .5s ease, background .5s ease;
@@ -206,27 +203,27 @@ section.portfolio {
       }
     }
     article.show#twt {
-      background: #55ACEE url('../images/twt-bw.jpg') repeat-x center center;
+      background: $sky url('../images/twt-bw.jpg') repeat-x center center;
       background-size: contain;
     }
     article.show#todo {
-      background: #93D189 url('../images/todo-bw.jpg') repeat-x center center;
+      background: $mint url('../images/todo-bw.jpg') repeat-x center center;
       background-size: 50%;
     }
     article.show#calc {
-      background: #AA5585 url('../images/calc-bw.jpg') repeat-x center center;
+      background: $berry url('../images/calc-bw.jpg') repeat-x center center;
       background-size: 80%;
     }
     article.show#gh {
-      background: #4078C0 url('../images/github-bw.jpg') repeat-x center center;
+      background: $royal url('../images/github-bw.jpg') repeat-x center center;
       background-size: contain;
     }
     article.show#sk8 {
-      background: #CB7461 url('../images/sk8-bw.jpg') repeat-x center center;
+      background: $coral url('../images/sk8-bw.jpg') repeat-x center center;
       background-size: contain;
     }
     article.show#tshirt {
-      background: #B39E77 url('../images/tshirt-bw.jpg') repeat-x center center;
+      background: $camel url('../images/tshirt-bw.jpg') repeat-x center center;
       background-size: contain;
     }
 
@@ -241,7 +238,7 @@ section.portfolio {
       p {
         // margin: 20px 0;
         border: 1px solid $gray;
-        background: #892D38;
+        background: $merlot;
         border-radius: 100px;
         padding: 0;
         a {
@@ -258,21 +255,21 @@ section.portfolio {
       }
     }
     article.hide#twt {
-      background: #55ACEE url('https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif') repeat-x center center;
+      background: $sky url('https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif') repeat-x center center;
       background-size: contain;
     }
     article.hide#todo {
-      background: #8DC785 url('https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif') repeat-x center center;
+      background: $mint1 url('https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif') repeat-x center center;
       background-position-y: 30px;
       background-size: contain;
     }
     article.hide#calc {
-      background: #AA5585 url('https://i.gyazo.com/70fef86f8bc7e3fe5db3926f2694c486.gif') repeat-x center center;
+      background: $berry url('https://i.gyazo.com/70fef86f8bc7e3fe5db3926f2694c486.gif') repeat-x center center;
       background-size: contain;
     }
     article.hide#gh {
       float:left;
-      background: #4078C0 url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x center center;
+      background: $royal url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x center center;
       background-size: contain;
     }
     article.hide#sk8 {
@@ -280,7 +277,7 @@ section.portfolio {
       background-size: contain;
     }
     article.hide#tshirt {
-      background: #B39E77 url('../images/tshirt.png') repeat-x center center;
+      background: $camel url('../images/tshirt.png') repeat-x center center;
       background-size: contain;
     }
   }
@@ -289,7 +286,7 @@ section.portfolio {
 
 div#parallax1 {
   position: relative;
-  background: #A64A54 url('../images/st-img.jpg') no-repeat top center;
+  background: $carnation url('../images/st-img.jpg') no-repeat top center;
   background-position: 45% 0%;
   background-size: cover;
   padding-bottom: 750px;
@@ -297,29 +294,30 @@ div#parallax1 {
   top: 0;
   height: 100%;
   z-index: -1;
+  width: 100%;
 }
 
 
 section.resume {
   @include span-columns(12 of 12);
-  border-top: 20px solid #892D38;
-  background: #F2B3BA;
+  border-top: 20px solid $merlot;
+  background: $blush;
   span {
     font-family: 'Parisienne', cursive;
     font-size: 2em;
-    color: #63111B;
+    color: $rosewood;
     margin-left: 30px;
   }
   div.resume {
     @include span-columns(10 of 12);
     margin: 5% 8%;
-    color: #63111B;
-    border: 1px solid #A64A54;
+    color: $rosewood;
+    border: 1px solid $carnation;
     background: white;
     opacity: 0.75;
     padding: 25px 50px;
     h1 {
-      color: #63111B;
+      color: $rosewood;
       font-size: 2.4em;
       text-transform: uppercase;
       display: inline-block;
@@ -338,7 +336,7 @@ section.resume {
     }
     a {
       text-decoration: none;
-      color: #A64A54;
+      color: $carnation;
     }
     ul.contact {
       li {
@@ -348,7 +346,7 @@ section.resume {
           font-family: 'Montserrat', sans-serif;
           padding-left: 5px;
           text-decoration: none;
-          color: #A64A54;
+          color: $carnation;
         }
       }
     }
@@ -380,7 +378,7 @@ section.resume {
         padding: 0 15px;
         // list-style-type: none;
         li {
-          color: #A64A54;
+          color: $carnation;
           font-size: .9em;
         }
       }
@@ -393,15 +391,15 @@ section.resume {
         padding: 0 15px;
         // list-style-type: none;
         li {
-          color: #A64A54;
+          color: $carnation;
         }
       }
       p {
-        color: #A64A54;
+        color: $carnation;
         font-size: .8em;
       }
       .info {
-        color: #63111B;
+        color: $rosewood;
         font-size: 1em;
       }
     }
@@ -482,4 +480,93 @@ section#resume {
     }
   }
  }
+ section.portfolio {
+   @include outer-container(100%);
+
+   h2 {
+     padding: 100px auto 0;
+     display: block;
+     text-align: center;
+     color: $blush;
+   }
+   div.portfolio {
+     @include span-columns(12 of 12);
+    //  margin-left: 20px;
+     text-align: center;
+   article.show,
+   article.hide {
+     @include span-columns(4 of 12);
+     width: 30%;
+     margin-left: 90px;
+     border-radius: 10px;
+     h2, p {
+       border-radius: 10px;
+     }
+   }
+ }
+ }
+ div#parallax1 {
+   padding-bottom: 900px;
+ }
+}
+
+@media (max-width: 770px) {
+header {
+  div.heading {
+    h1 {
+      float: left;
+      left: 50px;
+      top: 65px;
+      font-size: 2.3em;
+    }
+  }
+  nav {
+    left: 50px;
+    a {
+      font-size: 1em;
+      border-top: 1px solid $carnation;
+      border-right: 1px solid $carnation;
+      width: 20px;
+      padding: 15px;
+      margin: 0;
+      background: rgba(250,250,250,0.3);
+      border-radius: 10px;
+      &:hover {
+        width: 20px;
+      }
+    }
+  }
+ }
+ section.bio h2 {
+   color: $carnation;
+ }
+}
+
+@media (max-width: 730px) {
+  header {
+    nav a {
+      font-size: .75em;
+    }
+  }
+  section.bio h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 660px) {
+  header {
+    nav {
+      a {
+        float: none;
+        display: block;
+        width: 200%;
+        &:hover {
+          width: 200%;
+        }
+      }
+    }
+  }
+  section.bio h2 {
+    float: right;
+  }
 }

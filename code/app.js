@@ -25,3 +25,11 @@ $('article').hover(function() {
 $('article p').hover(function() {
   $(this).toggleClass('hide show');
 });
+
+$('article').click(function() {
+  $(this).toggleClass('hide show');
+});
+
+$('article p').click(function() {
+  $(this).toggleClass('hide show');
+});
