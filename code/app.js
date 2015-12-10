@@ -1,4 +1,5 @@
 console.log('hello there!');
+// var $ = require('./node_modules/jquery-ui/jquery-ui.js');
 
 var ypos;
 var image;
@@ -19,17 +20,17 @@ var image1;
 var article = document.getElementsByName('article');
 
 $('article').hover(function() {
-  $(this).toggleClass('hide show');
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
 });
 
 $('article p').hover(function() {
-  $(this).toggleClass('hide show');
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
 });
 
 $('article').click(function() {
-  $(this).toggleClass('hide show');
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
 });
 
 $('article p').click(function() {
-  $(this).toggleClass('hide show');
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
 });

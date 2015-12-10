@@ -19,6 +19,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "neat": "~1.7.2",
-    "normalize-strings": "normalize#~1.0.4"
+    "normalize-strings": "normalize#~1.0.4",
+    "jquery-ui": ""
   }
 }

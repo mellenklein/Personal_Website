@@ -17,7 +17,7 @@ div.header-fill {
 
 div.wrapper {
   position: relative;
-  background: #A64A54 url("../images/bg1.jpg") no-repeat top center;
+  background: #A64A54 url("../images/bg3.jpg") no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
   padding-top: 100px;
@@ -83,7 +83,7 @@ section.bio {
   section.bio:last-child {
     margin-right: 0; }
   section.bio h2 {
-    color: white; }
+    color: #A64A54; }
     section.bio h2 span {
       font-family: 'Parisienne', cursive;
       font-size: 2em; }
@@ -170,7 +170,7 @@ section.portfolio {
     margin-right: 2.35765%;
     width: 100%;
     margin: 30px 0;
-    margin-left: 0;
+    margin-left: 2.5%;
     z-index: 1;
     height: 100%; }
     section.portfolio div.portfolio:last-child {
@@ -200,7 +200,6 @@ section.portfolio {
         margin: 20px 0;
         font-size: 2em;
         border: 1px solid #BFBFBF;
-        border-radius: 100px;
         background: rgba(250, 250, 250, 0.8);
         transition: color 0.5s ease, background 0.5s ease; }
         section.portfolio div.portfolio article.show h2:hover {
@@ -208,31 +207,34 @@ section.portfolio {
           cursor: pointer;
           background: white;
           transition: color 0.5s ease, background 0.5s ease; }
+      section.portfolio div.portfolio article.show h3 {
+        color: rgba(250, 250, 250, 0.8);
+        font-weight: lighter; }
       section.portfolio div.portfolio article.show p {
         display: none; }
     section.portfolio div.portfolio article.show#twt {
-      background: #55ACEE url("../images/twt-bw.jpg") repeat-x center center;
-      background-size: contain; }
+      background: #55ACEE;
+      background-size: 100%; }
     section.portfolio div.portfolio article.show#todo {
-      background: #93D189 url("../images/todo-bw.jpg") repeat-x center center;
-      background-size: 50%; }
+      background: #8DC785;
+      background-size: 100%; }
     section.portfolio div.portfolio article.show#calc {
-      background: #AA5585 url("../images/calc-bw.jpg") repeat-x center center;
+      background: #AA5585;
       background-size: 80%; }
     section.portfolio div.portfolio article.show#gh {
-      background: #4078C0 url("../images/github-bw.jpg") repeat-x center center;
-      background-size: contain; }
+      background: #4078C0;
+      background-size: 100%; }
     section.portfolio div.portfolio article.show#sk8 {
-      background: #CB7461 url("../images/sk8-bw.jpg") repeat-x center center;
-      background-size: contain; }
+      background: #CB7461;
+      background-size: 100%; }
     section.portfolio div.portfolio article.show#tshirt {
-      background: #B39E77 url("../images/tshirt-bw.jpg") repeat-x center center;
-      background-size: contain; }
+      background: #B39E77;
+      background-size: 100%; }
     section.portfolio div.portfolio article.hide {
       height: 240px;
       padding: 50px 0;
       overflow: hidden; }
-      section.portfolio div.portfolio article.hide h2 {
+      section.portfolio div.portfolio article.hide h2, section.portfolio div.portfolio article.hide h3 {
         display: none; }
       section.portfolio div.portfolio article.hide p {
         border: 1px solid #BFBFBF;
@@ -263,7 +265,7 @@ section.portfolio {
       background: #4078C0 url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
       background-size: contain; }
     section.portfolio div.portfolio article.hide#sk8 {
-      background: #CDCDCD url("http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif") repeat-x center center;
+      background: #CB7461 url("http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif") repeat-x center center;
       background-size: contain; }
     section.portfolio div.portfolio article.hide#tshirt {
       background: #B39E77 url("../images/tshirt.png") repeat-x center center;
@@ -410,10 +412,12 @@ section.resume {
     left: 300px; }
   header nav {
     left: 280px; }
-  section.portfolio div.portfolio article.show h2 {
-    font-size: 1.5em; }
-  section.portfolio div.portfolio p {
-    font-size: .75em; }
+  section.portfolio div.portfolio {
+    margin-left: 0; }
+    section.portfolio div.portfolio article.show h2 {
+      font-size: 1.5em; }
+    section.portfolio div.portfolio p {
+      font-size: .75em; }
   section#resume div.resume {
     padding: 25px 40px; }
     section#resume div.resume h1 {
@@ -430,7 +434,7 @@ section.resume {
     section#resume div.resume p.info {
       font-size: .94em; } }
 
-@media (max-width: 920px) {
+@media (max-width: 935px) {
   section.bio h2 {
     font-size: 1.2em; }
   section#about {
@@ -495,9 +499,8 @@ section.resume {
         section.portfolio div.portfolio article.hide:last-child {
           margin-right: 0; }
         section.portfolio div.portfolio article.show h2,
-        section.portfolio div.portfolio article.show p,
-        section.portfolio div.portfolio article.hide h2, section.portfolio div.portfolio article.hide p {
-          border-radius: 10px; }
+        section.portfolio div.portfolio article.hide h2 {
+          margin-top: 0px; }
   div#parallax1 {
     padding-bottom: 900px; } }
 
@@ -515,26 +518,63 @@ section.resume {
       border-right: 1px solid #A64A54;
       width: 20px;
       padding: 15px;
-      margin: 0;
+      margin: 5px 0 0;
       background: rgba(250, 250, 250, 0.3);
       border-radius: 10px; }
       header nav a:hover {
         width: 20px; }
   section.bio h2 {
-    color: #A64A54; } }
+    color: #A64A54;
+    position: static; } }
 
-@media (max-width: 730px) {
+@media (max-width: 740px) {
   header nav a {
     font-size: .75em; }
   section.bio h2 {
     font-size: 1em; } }
 
-@media (max-width: 660px) {
+@media (max-width: 672px) {
   header nav a {
     float: none;
     display: block;
-    width: 200%; }
+    width: 150%; }
     header nav a:hover {
-      width: 200%; }
+      width: 150%; }
+  section.bio {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%; }
+    section.bio:last-child {
+      margin-right: 0; }
+    section.bio h2 {
+      font-size: 1em;
+      margin-top: 170px; }
+    section.bio p {
+      font-size: .85em; }
+  section.portfolio div.portfolio article.show {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25%; }
+    section.portfolio div.portfolio article.show:last-child {
+      margin-right: 0; }
+  section.portfolio div.portfolio article.hide {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25%; }
+    section.portfolio div.portfolio article.hide:last-child {
+      margin-right: 0; }
+  div#parallax1 {
+    padding-bottom: 2000px; } }
+
+@media (max-width: 560px) {
+  header div.heading h1 {
+    font-size: 1.5em; }
   section.bio h2 {
-    float: right; } }
+    font-size: .8em; }
+  section#about div.image {
+    margin-left: 10%; } }

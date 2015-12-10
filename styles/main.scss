@@ -13,7 +13,7 @@ div.header-fill {
 }
 div.wrapper {
   position: relative;
-  background: $carnation url('../images/bg1.jpg') no-repeat top center;
+  background: $carnation url('../images/bg3.jpg') no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
   padding-top: 100px;
@@ -80,7 +80,7 @@ section.bio {
     margin-top: 230px;
     padding-left: 50px;
     h2 {
-      color: white;
+      color: $carnation;
       span {
         font-family: 'Parisienne', cursive;
         font-size: 2em;
@@ -164,7 +164,7 @@ section.portfolio {
   div.portfolio {
     @include span-columns(12 of 12);
     margin: 30px 0;
-    margin-left: 0;
+    margin-left: 2.5%;
     z-index: 1;
     height: 100%;
 
@@ -188,7 +188,7 @@ section.portfolio {
         margin: 20px 0;
         font-size: 2em;
         border: 1px solid $gray;
-        border-radius: 100px;
+        // border-radius: 100px;
         background: rgba(250, 250, 250, 0.8);
         transition: color .5s ease, background .5s ease;
         &:hover {
@@ -198,45 +198,47 @@ section.portfolio {
           transition: color .5s ease, background .5s ease;
         }
       }
+      h3 {
+        color: rgba(250, 250, 250, 0.8);
+        font-weight: lighter;
+      }
       p {
         display: none;
       }
     }
     article.show#twt {
-      background: $sky url('../images/twt-bw.jpg') repeat-x center center;
-      background-size: contain;
+      background: $sky;
+      background-size: 100%;
     }
     article.show#todo {
-      background: $mint url('../images/todo-bw.jpg') repeat-x center center;
-      background-size: 50%;
+      background: $mint;
+      background-size: 100%;
     }
     article.show#calc {
-      background: $berry url('../images/calc-bw.jpg') repeat-x center center;
+      background: $berry;
       background-size: 80%;
     }
     article.show#gh {
-      background: $royal url('../images/github-bw.jpg') repeat-x center center;
-      background-size: contain;
+      background: $royal;
+      background-size: 100%;
     }
     article.show#sk8 {
-      background: $coral url('../images/sk8-bw.jpg') repeat-x center center;
-      background-size: contain;
+      background: $coral;
+      background-size: 100%;
     }
     article.show#tshirt {
-      background: $camel url('../images/tshirt-bw.jpg') repeat-x center center;
-      background-size: contain;
+      background: $camel;
+      background-size: 100%;
     }
 
     article.hide {
       height: 240px;
       padding: 50px 0;
       overflow: hidden;
-      // margin: 50px 10px;
-      h2 {
+      h2, h3 {
         display: none;
       }
       p {
-        // margin: 20px 0;
         border: 1px solid $gray;
         background: $merlot;
         border-radius: 100px;
@@ -259,7 +261,7 @@ section.portfolio {
       background-size: contain;
     }
     article.hide#todo {
-      background: $mint1 url('https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif') repeat-x center center;
+      background: $mint url('https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif') repeat-x center center;
       background-position-y: 30px;
       background-size: contain;
     }
@@ -273,7 +275,7 @@ section.portfolio {
       background-size: contain;
     }
     article.hide#sk8 {
-      background: #CDCDCD url('http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif') repeat-x center center;
+      background: $coral url('http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif') repeat-x center center;
       background-size: contain;
     }
     article.hide#tshirt {
@@ -418,6 +420,7 @@ header nav {
 }
 section.portfolio {
   div.portfolio {
+    margin-left: 0;
   article.show h2 {
     font-size: 1.5em;
   }
@@ -451,7 +454,7 @@ section#resume {
 }
 
 
-@media (max-width: 920px) {
+@media (max-width: 935px) {
 
   section.bio h2 {
     font-size: 1.2em;
@@ -499,8 +502,8 @@ section#resume {
      width: 30%;
      margin-left: 90px;
      border-radius: 10px;
-     h2, p {
-       border-radius: 10px;
+     h2 {
+       margin-top: 0px;
      }
    }
  }
@@ -528,7 +531,7 @@ header {
       border-right: 1px solid $carnation;
       width: 20px;
       padding: 15px;
-      margin: 0;
+      margin: 5px 0 0;
       background: rgba(250,250,250,0.3);
       border-radius: 10px;
       &:hover {
@@ -537,12 +540,15 @@ header {
     }
   }
  }
- section.bio h2 {
+ section.bio {
+   h2 {
    color: $carnation;
+   position: static;
+  }
  }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 740px) {
   header {
     nav a {
       font-size: .75em;
@@ -553,20 +559,52 @@ header {
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 672px) {
   header {
     nav {
       a {
         float: none;
         display: block;
-        width: 200%;
+        width: 150%;
         &:hover {
-          width: 200%;
+          width: 150%;
         }
       }
     }
   }
-  section.bio h2 {
-    float: right;
+  section.bio {
+    @include span-columns(5 of 12);
+    h2 {
+      font-size: 1em;
+      margin-top: 170px;
+    }
+    p {
+      font-size: .85em;
+    }
+  }
+  section.portfolio div.portfolio article.show {
+    @include span-columns(6 of 12);
+    margin-left: 25%;
+  }
+  section.portfolio div.portfolio article.hide {
+    @include span-columns(6 of 12);
+    margin-left: 25%;
+  }
+  div#parallax1 {
+    padding-bottom: 2000px;
+  }
+}
+
+@media (max-width: 560px) {
+  header div.heading h1 {
+    font-size:1.5em;
+  }
+  section.bio {
+    h2 {
+      font-size: .8em;
+    }
+  }
+  section#about div.image {
+    margin-left: 10%;
   }
 }
