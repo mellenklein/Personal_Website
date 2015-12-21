@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/main.css" media="screen">
     <title>Mary Ellen Klein | Front End Developer</title>
     <link rel="stylesheet"     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="header-fill"></div>
-    <header class="clearfix">
-      <div class="heading">
-        <h1>Mary Ellen Klein</h1>
-        <!-- <h2>Front End Developer</h2> -->
-      </div>
+    <header class="header">
       <nav>
-        <a href="#about">About</a>
-        <a href="#resume">Résumé</a>
-        <a href="#portfolio">Code</a>
-        <a href="https://medium.com/@maryellenklein" target="_blank">Blog</a>
+        <a href="#about"> About</a>
+        <a href="#resume"> Résumé</a>
+        <a href="#portfolio"> Code</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
         <a href="https://melonandthemayhem.bandcamp.com" target="_blank">Music</a>
       </nav>
     </header>
-    <section class="bio">
+    <div class="wrapper">
+    <main>
+      <div class="heading">
+        <h1>Mary Ellen Klein</h1>
+      </div>
+      <section class="bio">
         <h2>< <span>hello world</span> ></h2>
         <p>
           I am a Front End Developer with a taste for aesthetics, focusing on building responsive and user-friendly experiences with clean, elegant code. Lover of JavaScript, HTML, CSS, jQuery and JS frameworks.
         </p>
       </section>
-    <div class="wrapper" id="parallax">
-      <main>
       </main>
     </div>
 
     <section id="about" class="about">
       <div class="about">
         <h2>< <span>about</span> ></h2>
-        <p>
+        <article>
           <i class="fa fa-graduation-cap"></i>
-          I am a Front End Engineer in Nashville, TN, learning to code at <a href="http://theironyard.com/about/">The Iron Yard</a> in downtown Nashville. I will graduate in January 2016.
-        </p>
-        <p>
+          <p class="abtCap">The Iron Yard</p>
+          <p class="about">I am a Front End Engineer in Nashville, TN, learning to code at <a href="http://theironyard.com/about/" target="_blank">The Iron Yard</a> in downtown Nashville. I will graduate in January 2016.
+          </p>
+        </article>
+        <article>
           <i class="fa fa-globe"></i>
-          Originally from Atlanta, my love for using languages began at a young age. Creative writing and poetry sparked my interest first, and then I discovered my passion for foreign language.
-        </p>
-        <p>
+          <p class="abtCap">A Love For Languages</p>
+          <p class="about">Originally from Atlanta, my love for using languages began at a young age. Creative writing and poetry sparked my interest first, and then I discovered my passion for foreign language.
+          </p>
+        </article>
+        <article>
           <i class="fa fa-language"></i>
-          I studied Japanese starting in fourth grade, and twelve years later I earned my Bachelors degree in Japanese Language and Literature.
-        </p>
-        <p>
+          <p class="abtCap">Foreign Language</p>
+          <p class="about">I studied Japanese starting in fourth grade, and twelve years later I earned my B.A. in Japanese Language and Literature from the University of Georgia.
+          </p>
+        </article>
+        <article>
           <i class="fa fa-music"></i>
-          Meanwhile, my innate passion for writing poetry led me to become a songwriter and musician during high school and college, which eventually led me to Nashville in 2011 to pursue music full time.
-        </p>
-        <p>
+          <p class="abtCap">Music</p>
+          <p class="about">Meanwhile, my innate passion for writing poetry led me to become a songwriter and musician during high school and college, which eventually led me to Nashville in 2011 to pursue music full time.
+          </p>
+        </article>
+        <article>
           <i class="fa fa-code"></i>
-          In late 2013, while editing my band's website, I became frustrated by the limitations on customizing the design. One thing led to another, and I discovered my great passion for learning the languages of the web. I began teaching myself HTML, CSS, and JavaScript. As my curiosity grew more insatiable, I knew it was time to fully immerse myself in the programming world. I enrolled in The Iron Yard's Front-End Development program in 2015 and will graduate in January 2016.
-        </p>
+          <p class="abtCap">Coding</p>
+          <p class="about">In late 2013, while editing my band's website, I became frustrated by the limitations on customizing the design. One thing led to another, and I discovered my great passion for learning the languages of the web. I began teaching myself HTML, CSS, and JavaScript. As my curiosity grew more insatiable, <a href="https://medium.com/@maryellenklein/putting-my-money-where-my-mouse-is-cd100b357f72#.bddfyhoid" target="_blank">I knew it was time to fully immerse myself in the programming world.</a> I enrolled in The Iron Yard's Front-End Development program in 2015.
+          </p>
+        </article>
       </div>
       <div class="image">
         <img src="../images/about1.jpg" alt="headshot" />
       </div>
     </section>
 
-
+  <div class="portWrapper">
+    <main>
     <section class="portfolio">
       <h2>< <span>portfolio</span> ></h2>
       <div class="portfolio" id="portfolio">
@@ -107,10 +117,8 @@
         </article>
       </div>
     </section>
-    <div class="wrapper" id="parallax1">
-      <main>
-      </main>
-    </div>
+    </main>
+  </div>
 
     <section class="resume" id="resume">
       <h2><span>Résumé</span></h2>
@@ -118,30 +126,34 @@
         <h1>Mary Ellen Klein</h1>
         <h2 class="resumeTitle">Front End Web Developer</h2>
         <p class="contact">2429 Melbourne Drive • Nashville, TN 37214</p>
-        <p class="contact"><a href="mailto:maryellenklein@gmail.com">maryellenklein@gmail.com</a> • <a href="http://www.maryellenklein.com">maryellenklein.com</a></p>
+        <p class="contact"><a href="mailto:maryellenklein@gmail.com" target="_blank">maryellenklein@gmail.com</a> • <a href="http://www.maryellenklein.com" target="_blank">maryellenklein.com</a></p>
 
       <div class="content">
         <section class="experience">
           <h3>Experience</h3>
+          <h2>Front End Development</h2>
+          <p>The Iron Yard  |  Nashville, TN  |  2015-2016</p>
+          <ul>
+            <li>Fully immersed myself in front end web development and design through a 12-week education program in downtown Nashville</li>
+            <li>Learned HTML, CSS, JavaScript, JS frameworks, and demonstrated skills through portfolio projects</li>
+            <li>Utilized version control (GitHub), used Agile project management system, collaborated in team setting</li>
+          </ul>
           <h2>Account Coordinator</h2>
-          <p>JMK & Associates  |  Nashville, TN  |  2014-2015</p>
+          <a href="http://jmkandassoc.com" target="_blank"></a><p>JMK & Associates  |  Nashville, TN  |  2014-2015</p>
           <ul>
             <li>Communicated with clients, interviewed sources, wrote story content</li>
             <li>Increased article placement rate by 200% in 9 months</li>
-            <li>Pitched content for clients and placed twelve stories in national publications</li>
           </ul>
-          <h2>Creative Director</h2>
+          <h2>Artistic Director</h2>
           <p>Melon & The Mayhem  |  Nashville, TN  |  2011-2014</p>
           <ul>
             <li>Designed a brand to market my musical vision</li>
             <li>Wrote, recorded and released 4 albums, booked and performed a national tour, designed and sold promotional materials</li>
-            <li>Pitched music for placement in television, film and ads</li>
           </ul>
           <h2>Music Licensing Assistant</h2>
           <p>Cartoon Network, Turner Broadcasting  |  Burbank, CA  |  2010</p>
           <ul>
-            <li>Assisted the Head of Music at Adult Swim with booking Metalocolypse summer tour</li>
-            <li>Researched, pitched and organized music catalog for use in television</li>
+            <li>Assisted the Head of Music with booking, pitching and organizing music catalog for use in televison</li>
           </ul>
           <h3>Contact: </h3>
           <ul class="contact">
@@ -165,15 +177,11 @@
             <li>SASS</li>
             <li>Git + GitHub</li>
             <li>UI/Design</li>
+            <li>Agile project management</li>
             <li>Content Writing</li>
           </ul>
-          <h3>Training</h3>
-          <p class="info">The Iron Yard | Nashville, TN | 2015</p>
-          <p>• 12-week fully-immersive program in Front-End Development</p>
 
           <h3>Education</h3>
-          <p class="info">The Iron Yard | Grad January 2016</p>
-          <p>• Front-End Development: JavaScript & MVCs</p>
           <p class="info">University of Georgia | 2007-2011</p>
           <p>• B.A. Japanese Language and Literature</p>
           <p>• Minor in Music Business</p>
@@ -181,21 +189,58 @@
           <p>• Study Abroad Program</p>
 
           <h3 class="community">Community</h3>
-          <p>• Nash.js - member</p>
-          <p>• Nashville Women Programmers - member</p>
-          <p>• Nodevember Conference - volunteer</p>
+          <a href="http://nashjs.org/" target="_blank"><p>• Nash.js</a> - member</p>
+          <a href="http://nashvillewomenprogrammers.com/" target="_blank"><p>• Nashville Women Programmers</a> - member</p>
+          <a href="http://nodevember.org/" target="_blank"><p>• Nodevember Conference</a> - volunteer</p>
         </section>
        </div>
       </div>
     </section>
 
-    <section id="code">
-
+    <section class="blog">
+      <h2>< <span>blog</span> ></h2>
+      <div class="blog" id="blog">
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/putting-my-money-where-my-mouse-is-cd100b357f72" target="_blank">Putting My Money Where My Mouse Is</a>
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/backbone-js-assembling-a-spine-5b8d04b98c18" target="_blank">Backbone.js: Assembling a Spine</a>
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/branching-out-jquery-ajax-e72151b9a0a8" target="_blank">Branching Out: jQuery & AJAX</a>
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/two-weeks-not-too-weak-4d064b4d0fcf" target="_blank">Two Weeks: Not Too Weak</a>
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/dreaming-in-code-4c3a7c575908" target="_blank">Dreaming in Code</a>
+        <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/how-many-programmers-does-it-take-a645e8b68166" target="_blank">How Many Programmers Does It Take…</a>
+      </div>
     </section>
-    <section id="blog">
 
+    <section id="contact" class="about contact">
+      <div class="about">
+        <h2>< <span>contact</span> ></h2>
+        <article>
+          <i class="fa fa-twitter"></i>
+          <p class="abtCap">Follow</p>
+          <p class="about low"><a href="http://www.twitter.com/mellenklein" target="_blank">@mellenklein</a></p>
+        </article>
+        <article class="blog">
+          <i class="fa fa-envelope"></i>
+          <p class="abtCap">Email</p>
+          <p class="about low"><a href="mailto:maryellenklein" target="_blank">maryellenklein@gmail.com</a></p>
+        </article>
+        <article>
+          <i class="fa fa-mobile"></i>
+          <p class="abtCap">Call</p>
+          <p class="about low"><a href="tel:4046256102" target="_blank">(404) 625-6102</a></p>
+        </article>
+        <article>
+          <i class="fa fa-linkedin"></i>
+          <p class="abtCap">Connect</p>
+          <p class="about low"><a href="http://linkedin.com/users/maryellenklein" target="_blank">Mary Ellen Klein</a></p>
+        </article>
+        <article>
+          <i class="fa fa-code"></i>
+          <p class="abtCap">GitHub</p>
+          <p class="about low"><a href="http://github.com/mellenklein" target="_blank">Mary Ellen Klein</a></p>
+        </article>
+      </div>
     </section>
 
+    <script async src="https://static.medium.com/embed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

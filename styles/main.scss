@@ -7,77 +7,61 @@ body {
   background: $carnation;
   font-family: 'Montserrat', sans-serif;
 }
-div.header-fill {
+header.header {
   background: $carnation;
-  height: 20px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid $merlot;
+  nav {
+    margin-right: 100px;
+    text-align: center;
+    float: right;
+    a {
+      color: $rosewood;
+      text-decoration: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0 20px;
+      letter-spacing: .2em;
+      transition: all 0.1s ease;
+      &:hover {
+        // font-weight: bold;
+        border-bottom: 2px solid $rosewood;
+        transition: all 0.1s ease;
+        padding-bottom: 7px;
+      }
+    }
+  }
 }
 div.wrapper {
-  position: relative;
   background: $carnation url('../images/bg3.jpg') no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
   padding-top: 100px;
-  top: 0;
-  z-index: -1;
+}
+main {
+  @include outer-container(100%);
 }
 
-header {
-  margin: 0 auto;
-  margin-right: 55%;
-  padding-top: 0;
+div.heading {
+  @include span-columns(12);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .5em;
-
-  div {
-    // float:left;
-  }
-  h1,
-  h2 {
+  h1 {
     color: $carnation;
-    margin: 0 auto;
-    position: absolute;
-    top: 80px;
-    left: 350px;
-  }
-  nav {
-    margin-top: 20px;
-    z-index: 999;
-    position: absolute;
-    top: 120px;
-    left: 340px;
-    a {
-      color: $merlot;
-      text-decoration: none;
-      font-size: .7em;
-      text-align: center;
-      font-weight: 500;
-      padding: 10px 5px;
-      transition: all 0.1s ease-in-out;
-      &:hover {
-        font-weight: bold;
-        transition: all 0.1s ease-in-out;
-      }
-    }
-  }
-  &::after {
-    content: "";
-    display:block;
-    clear: both;
+    margin: 35px auto;
   }
 }
-
-main {
-  @include outer-container;
-  position: relative;
-  z-index: 1;
-}
-
 section.bio {
     @include span-columns(4 of 12);
     float: left;
     color: white;
-    margin-top: 230px;
+    margin-top: 100px;
     padding-left: 50px;
     h2 {
       color: $carnation;
@@ -95,63 +79,112 @@ section.bio {
     }
 }
 
+///////// ABOUT ////////
 
 section.about {
-  @include span-columns(12 of 12);
+  @include outer-container(100%);
   border-top: 20px solid $merlot;
   border-bottom: 20px solid $merlot;
   background: $carnation;
   color: white;
   position: static;
-  z-index: 1;
   h2 {
     margin: 0;
-    // text-align: center;
   }
   span {
     font-family: 'Parisienne', cursive;
     font-size: 2em;
   }
   div.about {
-    @include span-columns(6 of 12);
-    margin: 30px 50px;
+    @include span-columns(11);
+    margin: 30px 50px 0;
     // text-align: center;
-    p {
+    article {
+      @include span-columns(2.6);
       margin: 30px 0;
-      float: none;
+      padding: 10px;
+      background: white;
+      float: left;
+      opacity: .8;
+      text-align: center;
+      height: 250px;
+      transition: display .5s ease-in-out;
+      overflow: scroll;
+      color: $carnation;
+      position:relative;
+      box-shadow:0 1px 4px rgba(166, 74, 84, 0.3), 0 0 40px rgba(166, 74, 84, 0.1) inset;
+      .fa {
+        font-size: 3.5em;
+        margin: 0 auto;
+        color: $carnation;
+        opacity: 1;
+        padding: 40px 0 20px;
+      }
+      p.abtCap {
+        padding-bottom: 50px;
+        // opacity: 1;
+        font-size: 1em;
+        // text-transform: uppercase;
+      }
+      p.about.low {
+        padding-top: 80px;
+        font-weight: lighter;
+      }
+      p.about {
+        display: none;
+      }
       a {
         text-decoration: none;
-        color: white;
+        color: $carnation;
         font-weight: 800;
       }
+      &:hover {
+        transition: display .5s ease-in-out;
+        opacity: 0.8;
+        cursor: default;
+        p.about {
+          display: block;
+          margin-top: 30px;
+        }
+        .fa,
+        p.abtCap {
+          display: none;
+        }
+      }
     }
-    .fa {
-      font-size: 2.5em;
-      margin-right: 5px;
+    article.blog {
+      overflow:visible;
     }
   }
   div.image {
-    @include span-columns(5 of 12);
+    @include span-columns(12);
     text-align: center;
     img {
       height: 250px;
-      // width: 200px;
-      margin-top: 250px;
+      margin-bottom: 20px;
       border-radius: 50px;
       border: 3px solid $merlot;
     }
   }
 }
 
+/////// portfolio ////
+
+div.portWrapper {
+    background: $carnation url('../images/st-img.jpg') no-repeat top center;
+    background-size: cover;
+    padding-bottom: 750px;
+    padding-top: 80px;
+}
 section.portfolio {
   @include outer-container;
-  border-top: 20px solid $merlot;
+  // border-top: 20px solid $merlot;
   background: $carnation;
   color: $carnation;
   // position: relative;
   margin: 0 auto;
   height: 0;
-  z-index: 1;
+  // z-index: 1;
   h2 {
     margin: 30px;
     color: $merlot;
@@ -165,15 +198,15 @@ section.portfolio {
     @include span-columns(12 of 12);
     margin: 30px 0;
     margin-left: 2.5%;
-    z-index: 1;
+    // z-index: 1;
     height: 100%;
 
     article.show,
     article.hide {
       @include span-columns(3 of 12);
       border: 1px solid white;
-      border-radius: 100px;
-      z-index: 1;
+      border-radius: 10px;
+      // z-index: 1;
       position: static;
       margin: 30px 10px;
       text-align: center;
@@ -181,6 +214,7 @@ section.portfolio {
       width: 30%;
     }
     article.show {
+      background: rgba(0, 0, 0, .5);
       height: 240px;
       padding: 80px 0;
       h2 {
@@ -189,7 +223,7 @@ section.portfolio {
         font-size: 2em;
         border: 1px solid $gray;
         // border-radius: 100px;
-        background: rgba(250, 250, 250, 0.8);
+        background: rgba(250, 250, 250, 0.5);
         transition: color .5s ease, background .5s ease;
         &:hover {
           color: $merlot;
@@ -207,27 +241,27 @@ section.portfolio {
       }
     }
     article.show#twt {
-      background: $sky;
+      // background: $sky;
       background-size: 100%;
     }
     article.show#todo {
-      background: $mint;
+      // background: $mint;
       background-size: 100%;
     }
     article.show#calc {
-      background: $berry;
+      // background: $berry;
       background-size: 80%;
     }
     article.show#gh {
-      background: $royal;
+      // background: $royal;
       background-size: 100%;
     }
     article.show#sk8 {
-      background: $coral;
+      // background: $coral;
       background-size: 100%;
     }
     article.show#tshirt {
-      background: $camel;
+      // background: $camel;
       background-size: 100%;
     }
 
@@ -241,7 +275,7 @@ section.portfolio {
       p {
         border: 1px solid $gray;
         background: $merlot;
-        border-radius: 100px;
+        // border-radius: 10px;
         padding: 0;
         a {
           text-decoration: none;
@@ -285,24 +319,10 @@ section.portfolio {
   }
 }
 
-
-div#parallax1 {
-  position: relative;
-  background: $carnation url('../images/st-img.jpg') no-repeat top center;
-  background-position: 45% 0%;
-  background-size: cover;
-  padding-bottom: 750px;
-  padding-top: 80px;
-  top: 0;
-  height: 100%;
-  z-index: -1;
-  width: 100%;
-}
-
-
 section.resume {
   @include span-columns(12 of 12);
   border-top: 20px solid $merlot;
+  border-bottom: 20px solid $merlot;
   background: $blush;
   span {
     font-family: 'Parisienne', cursive;
@@ -407,6 +427,33 @@ section.resume {
     }
   }
 }
+
+/////// blog ////
+
+section.blog {
+  @include outer-container;
+  h2 {
+    color: $blush;
+    span {
+      font-family: 'Parisienne', cursive;
+      font-size: 2em;
+    }
+  }
+  div.blog {
+    margin: 0 auto;
+    width: 90%;
+    iframe {
+      @include span-columns(3.9 of 12);
+      margin: 10px;
+      opacity: .9;
+      height: 405px;
+      &:nth-child(4) {
+        clear: both;
+      }
+   }
+  }
+}
+
 @import "_responsive.scss";
 
 @media (max-width: 995px) {
@@ -452,7 +499,6 @@ section#resume {
   }
  }
 }
-
 
 @media (max-width: 935px) {
 
@@ -606,5 +652,16 @@ header {
   }
   section#about div.image {
     margin-left: 10%;
+  }
+}
+
+@media (max-width: 415px) {
+  section.about {
+    div.image {
+      img {
+        width: 250px;
+        height: auto;
+      }
+    }
   }
 }

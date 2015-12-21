@@ -11,65 +11,60 @@ body {
   background: #A64A54;
   font-family: 'Montserrat', sans-serif; }
 
-div.header-fill {
+header.header {
   background: #A64A54;
-  height: 20px; }
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #892D38; }
+  header.header nav {
+    margin-right: 100px;
+    text-align: center;
+    float: right; }
+    header.header nav a {
+      color: #63111b;
+      text-decoration: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0 20px;
+      letter-spacing: .2em;
+      transition: all 0.1s ease; }
+      header.header nav a:hover {
+        border-bottom: 2px solid #63111b;
+        transition: all 0.1s ease;
+        padding-bottom: 7px; }
 
 div.wrapper {
-  position: relative;
   background: #A64A54 url("../images/bg3.jpg") no-repeat top center;
   background-size: cover;
   padding-bottom: 200px;
-  padding-top: 100px;
-  top: 0;
-  z-index: -1; }
-
-header {
-  margin: 0 auto;
-  margin-right: 55%;
-  padding-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .5em; }
-  header h1,
-  header h2 {
-    color: #A64A54;
-    margin: 0 auto;
-    position: absolute;
-    top: 80px;
-    left: 350px; }
-  header nav {
-    margin-top: 20px;
-    z-index: 999;
-    position: absolute;
-    top: 120px;
-    left: 340px; }
-    header nav a {
-      color: #892D38;
-      text-decoration: none;
-      font-size: .7em;
-      text-align: center;
-      font-weight: 500;
-      padding: 10px 5px;
-      transition: all 0.1s ease-in-out; }
-      header nav a:hover {
-        font-weight: bold;
-        transition: all 0.1s ease-in-out; }
-  header::after {
-    content: "";
-    display: block;
-    clear: both; }
+  padding-top: 100px; }
 
 main {
-  max-width: 68em;
+  max-width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 1; }
+  margin-right: auto; }
   main::after {
     clear: both;
     content: "";
     display: table; }
+
+div.heading {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5em; }
+  div.heading:last-child {
+    margin-right: 0; }
+  div.heading h1 {
+    color: #A64A54;
+    margin: 35px auto; }
 
 section.bio {
   float: left;
@@ -78,7 +73,7 @@ section.bio {
   width: 31.76157%;
   float: left;
   color: white;
-  margin-top: 230px;
+  margin-top: 100px;
   padding-left: 50px; }
   section.bio:last-child {
     margin-right: 0; }
@@ -95,18 +90,18 @@ section.bio {
     color: #892D38; }
 
 section.about {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   border-top: 20px solid #892D38;
   border-bottom: 20px solid #892D38;
   background: #A64A54;
   color: white;
-  position: static;
-  z-index: 1; }
-  section.about:last-child {
-    margin-right: 0; }
+  position: static; }
+  section.about::after {
+    clear: both;
+    content: "";
+    display: table; }
   section.about h2 {
     margin: 0; }
   section.about span {
@@ -116,44 +111,87 @@ section.about {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin: 30px 50px; }
+    width: 91.4702%;
+    margin: 30px 50px 0; }
     section.about div.about:last-child {
       margin-right: 0; }
-    section.about div.about p {
+    section.about div.about article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 19.81984%;
       margin: 30px 0;
-      float: none; }
-      section.about div.about p a {
+      padding: 10px;
+      background: white;
+      float: left;
+      opacity: .8;
+      text-align: center;
+      height: 250px;
+      transition: display 0.5s ease-in-out;
+      overflow: scroll;
+      color: #A64A54;
+      position: relative;
+      box-shadow: 0 1px 4px rgba(166, 74, 84, 0.3), 0 0 40px rgba(166, 74, 84, 0.1) inset; }
+      section.about div.about article:last-child {
+        margin-right: 0; }
+      section.about div.about article .fa {
+        font-size: 3.5em;
+        margin: 0 auto;
+        color: #A64A54;
+        opacity: 1;
+        padding: 40px 0 20px; }
+      section.about div.about article p.abtCap {
+        padding-bottom: 50px;
+        font-size: 1em; }
+      section.about div.about article p.about.low {
+        padding-top: 80px;
+        font-weight: lighter; }
+      section.about div.about article p.about {
+        display: none; }
+      section.about div.about article a {
         text-decoration: none;
-        color: white;
+        color: #A64A54;
         font-weight: 800; }
-    section.about div.about .fa {
-      font-size: 2.5em;
-      margin-right: 5px; }
+      section.about div.about article:hover {
+        transition: display 0.5s ease-in-out;
+        opacity: 0.8;
+        cursor: default; }
+        section.about div.about article:hover p.about {
+          display: block;
+          margin-top: 30px; }
+        section.about div.about article:hover .fa,
+        section.about div.about article:hover p.abtCap {
+          display: none; }
+    section.about div.about article.blog {
+      overflow: visible; }
   section.about div.image {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%;
+    width: 100%;
     text-align: center; }
     section.about div.image:last-child {
       margin-right: 0; }
     section.about div.image img {
       height: 250px;
-      margin-top: 250px;
+      margin-bottom: 20px;
       border-radius: 50px;
       border: 3px solid #892D38; }
+
+div.portWrapper {
+  background: #A64A54 url("../images/st-img.jpg") no-repeat top center;
+  background-size: cover;
+  padding-bottom: 750px;
+  padding-top: 80px; }
 
 section.portfolio {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  border-top: 20px solid #892D38;
   background: #A64A54;
   color: #A64A54;
   margin: 0 auto;
-  height: 0;
-  z-index: 1; }
+  height: 0; }
   section.portfolio::after {
     clear: both;
     content: "";
@@ -171,7 +209,6 @@ section.portfolio {
     width: 100%;
     margin: 30px 0;
     margin-left: 2.5%;
-    z-index: 1;
     height: 100%; }
     section.portfolio div.portfolio:last-child {
       margin-right: 0; }
@@ -182,8 +219,7 @@ section.portfolio {
       margin-right: 2.35765%;
       width: 23.23176%;
       border: 1px solid white;
-      border-radius: 100px;
-      z-index: 1;
+      border-radius: 10px;
       position: static;
       margin: 30px 10px;
       text-align: center;
@@ -193,6 +229,7 @@ section.portfolio {
       section.portfolio div.portfolio article.hide:last-child {
         margin-right: 0; }
     section.portfolio div.portfolio article.show {
+      background: rgba(0, 0, 0, 0.5);
       height: 240px;
       padding: 80px 0; }
       section.portfolio div.portfolio article.show h2 {
@@ -200,7 +237,7 @@ section.portfolio {
         margin: 20px 0;
         font-size: 2em;
         border: 1px solid #BFBFBF;
-        background: rgba(250, 250, 250, 0.8);
+        background: rgba(250, 250, 250, 0.5);
         transition: color 0.5s ease, background 0.5s ease; }
         section.portfolio div.portfolio article.show h2:hover {
           color: #892D38;
@@ -213,22 +250,16 @@ section.portfolio {
       section.portfolio div.portfolio article.show p {
         display: none; }
     section.portfolio div.portfolio article.show#twt {
-      background: #55ACEE;
       background-size: 100%; }
     section.portfolio div.portfolio article.show#todo {
-      background: #8DC785;
       background-size: 100%; }
     section.portfolio div.portfolio article.show#calc {
-      background: #AA5585;
       background-size: 80%; }
     section.portfolio div.portfolio article.show#gh {
-      background: #4078C0;
       background-size: 100%; }
     section.portfolio div.portfolio article.show#sk8 {
-      background: #CB7461;
       background-size: 100%; }
     section.portfolio div.portfolio article.show#tshirt {
-      background: #B39E77;
       background-size: 100%; }
     section.portfolio div.portfolio article.hide {
       height: 240px;
@@ -239,7 +270,6 @@ section.portfolio {
       section.portfolio div.portfolio article.hide p {
         border: 1px solid #BFBFBF;
         background: #892D38;
-        border-radius: 100px;
         padding: 0; }
         section.portfolio div.portfolio article.hide p a {
           text-decoration: none;
@@ -271,24 +301,13 @@ section.portfolio {
       background: #B39E77 url("../images/tshirt.png") repeat-x center center;
       background-size: contain; }
 
-div#parallax1 {
-  position: relative;
-  background: #A64A54 url("../images/st-img.jpg") no-repeat top center;
-  background-position: 45% 0%;
-  background-size: cover;
-  padding-bottom: 750px;
-  padding-top: 80px;
-  top: 0;
-  height: 100%;
-  z-index: -1;
-  width: 100%; }
-
 section.resume {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   border-top: 20px solid #892D38;
+  border-bottom: 20px solid #892D38;
   background: #F2B3BA; }
   section.resume:last-child {
     margin-right: 0; }
@@ -383,6 +402,35 @@ section.resume {
       section.resume div.resume section.skills .info {
         color: #63111b;
         font-size: 1em; }
+
+section.blog {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  section.blog::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section.blog h2 {
+    color: #F2B3BA; }
+    section.blog h2 span {
+      font-family: 'Parisienne', cursive;
+      font-size: 2em; }
+  section.blog div.blog {
+    margin: 0 auto;
+    width: 90%; }
+    section.blog div.blog iframe {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 30.90859%;
+      margin: 10px;
+      opacity: .9;
+      height: 405px; }
+      section.blog div.blog iframe:last-child {
+        margin-right: 0; }
+      section.blog div.blog iframe:nth-child(4) {
+        clear: both; }
 
 @media (max-width: 995px) {
   div.heading h1 {
@@ -578,3 +626,8 @@ section.resume {
     font-size: .8em; }
   section#about div.image {
     margin-left: 10%; } }
+
+@media (max-width: 415px) {
+  section.about div.image img {
+    width: 250px;
+    height: auto; } }
