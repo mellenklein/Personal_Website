@@ -150,7 +150,8 @@ section.about {
         padding-top: 80px;
         font-weight: lighter; }
       section.about div.about article p.about,
-      section.about div.about article iframe#twitter-widget-0 {
+      section.about div.about article iframe#twitter-widget-0,
+      section.about div.about article span.IN-widget {
         display: none; }
       section.about div.about article a {
         text-decoration: none;
@@ -161,7 +162,8 @@ section.about {
         opacity: 0.8;
         cursor: default; }
         section.about div.about article:hover p.about,
-        section.about div.about article:hover iframe#twitter-widget-0 {
+        section.about div.about article:hover iframe#twitter-widget-0,
+        section.about div.about article:hover span.IN-widget {
           display: block;
           margin-top: 10px; }
         section.about div.about article:hover .fa,
@@ -171,11 +173,13 @@ section.about {
       padding-bottom: 100px; }
     section.about div.about article.twitter p.about.low {
       padding-top: 0; }
-    section.about div.about article.blog {
-      overflow: visible; }
+    section.about div.about article.linkedin {
+      overflow: hidden; }
     section.about div.about article.github {
-      background: #4078C0 url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
-      background-size: contain; }
+      background-image: none; }
+      section.about div.about article.github:hover {
+        background: rgba(250, 250, 250, 0.8) url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
+        background-size: contain; }
   section.about div.image {
     float: left;
     display: block;

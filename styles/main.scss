@@ -135,7 +135,8 @@ section.about {
         font-weight: lighter;
       }
       p.about,
-      iframe#twitter-widget-0 {
+      iframe#twitter-widget-0,
+      span.IN-widget {
         display: none;
       }
       a {
@@ -148,7 +149,8 @@ section.about {
         opacity: 0.8;
         cursor: default;
         p.about,
-        iframe#twitter-widget-0 {
+        iframe#twitter-widget-0,
+        span.IN-widget {
           display: block;
           margin-top: 10px;
         }
@@ -166,13 +168,19 @@ section.about {
         padding-top: 0;
       }
     }
-    article.blog {
-      overflow:visible;
+    // article.blog {
+    //   overflow:visible;
+    // }
+    article.linkedin {
+      overflow: hidden;
     }
     article.github {
-
-      background: $royal url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x center center;
-      background-size: contain;
+      // background: $blush;
+      background-image: none;
+      &:hover {
+        background: rgba(250,250,250,0.8) url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x center center;
+        background-size: contain;
+      }
     }
   }
   div.image {
