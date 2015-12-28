@@ -173,6 +173,12 @@ section.about {
     // }
     article.linkedin {
       overflow: hidden;
+      p.abtCap {
+        padding-bottom: 100px;
+      }
+      p.about.low {
+        padding-top: 0;
+      }
     }
     article.github {
       // background: $blush;

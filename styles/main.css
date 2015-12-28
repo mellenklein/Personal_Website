@@ -175,6 +175,10 @@ section.about {
       padding-top: 0; }
     section.about div.about article.linkedin {
       overflow: hidden; }
+      section.about div.about article.linkedin p.abtCap {
+        padding-bottom: 100px; }
+      section.about div.about article.linkedin p.about.low {
+        padding-top: 0; }
     section.about div.about article.github {
       background-image: none; }
       section.about div.about article.github:hover {
