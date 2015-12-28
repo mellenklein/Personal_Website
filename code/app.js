@@ -10,6 +10,9 @@ $('article').hover(function() {
 $('article p').hover(function() {
   $(this).toggleClass('hide show', 1000, "easeOutSine");
 });
+$('article a').hover(function() {
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
+});
 
 $('article').click(function() {
   $(this).toggleClass('hide show', 1000, "easeOutSine");
@@ -17,4 +20,11 @@ $('article').click(function() {
 
 $('article p').click(function() {
   $(this).toggleClass('hide show', 1000, "easeOutSine");
+});
+$('article a').click(function() {
+  $(this).toggleClass('hide show', 1000, "easeOutSine");
+});
+
+$('button').click(function() {
+  $(this).siblings('div').slideToggle();
 });

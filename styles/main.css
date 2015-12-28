@@ -11,6 +11,9 @@ body {
   background: #A64A54;
   font-family: 'Montserrat', sans-serif; }
 
+.mobile {
+  display: none; }
+
 header.header {
   background: #A64A54;
   position: fixed;
@@ -146,7 +149,8 @@ section.about {
       section.about div.about article p.about.low {
         padding-top: 80px;
         font-weight: lighter; }
-      section.about div.about article p.about {
+      section.about div.about article p.about,
+      section.about div.about article iframe#twitter-widget-0 {
         display: none; }
       section.about div.about article a {
         text-decoration: none;
@@ -156,14 +160,22 @@ section.about {
         transition: display 0.5s ease-in-out;
         opacity: 0.8;
         cursor: default; }
-        section.about div.about article:hover p.about {
+        section.about div.about article:hover p.about,
+        section.about div.about article:hover iframe#twitter-widget-0 {
           display: block;
-          margin-top: 30px; }
+          margin-top: 10px; }
         section.about div.about article:hover .fa,
         section.about div.about article:hover p.abtCap {
           display: none; }
+    section.about div.about article.twitter p.abtCap {
+      padding-bottom: 100px; }
+    section.about div.about article.twitter p.about.low {
+      padding-top: 0; }
     section.about div.about article.blog {
       overflow: visible; }
+    section.about div.about article.github {
+      background: #4078C0 url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
+      background-size: contain; }
   section.about div.image {
     float: left;
     display: block;
@@ -208,7 +220,6 @@ section.portfolio {
     margin-right: 2.35765%;
     width: 100%;
     margin: 30px 0;
-    margin-left: 2.5%;
     height: 100%; }
     section.portfolio div.portfolio:last-child {
       margin-right: 0; }
@@ -404,21 +415,29 @@ section.resume {
         font-size: 1em; }
 
 section.blog {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  section.blog::after {
-    clear: both;
-    content: "";
-    display: table; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-bottom: 20px solid #892D38;
+  padding-bottom: 20px; }
+  section.blog:last-child {
+    margin-right: 0; }
   section.blog h2 {
-    color: #F2B3BA; }
+    color: #F2B3BA;
+    margin: 20px; }
     section.blog h2 span {
       font-family: 'Parisienne', cursive;
       font-size: 2em; }
   section.blog div.blog {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
     margin: 0 auto;
     width: 90%; }
+    section.blog div.blog:last-child {
+      margin-right: 0; }
     section.blog div.blog iframe {
       float: left;
       display: block;
@@ -429,8 +448,10 @@ section.blog {
       height: 405px; }
       section.blog div.blog iframe:last-child {
         margin-right: 0; }
-      section.blog div.blog iframe:nth-child(4) {
-        clear: both; }
+    section.blog div.blog::after {
+      content: "";
+      display: none;
+      clear: both; }
 
 @media (max-width: 995px) {
   div.heading h1 {
@@ -485,22 +506,26 @@ section.blog {
 @media (max-width: 935px) {
   section.bio h2 {
     font-size: 1.2em; }
-  section#about {
+  section#about,
+  section#contact {
     margin: 0; }
-    section#about div.about {
+    section#about div.about,
+    section#contact div.about {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%;
-      margin: 0 25%;
+      margin: 0;
       display: block;
-      width: 50%;
       text-align: center; }
-      section#about div.about:last-child {
+      section#about div.about:last-child,
+      section#contact div.about:last-child {
         margin-right: 0; }
-      section#about div.about h2 {
+      section#about div.about h2,
+      section#contact div.about h2 {
         margin: 30px; }
-    section#about div.image {
+    section#about div.image,
+    section#contact div.image {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -509,68 +534,100 @@ section.blog {
       width: 50%;
       margin: 40px 25%;
       display: block; }
-      section#about div.image:last-child {
+      section#about div.image:last-child,
+      section#contact div.image:last-child {
         margin-right: 0; }
-      section#about div.image img {
+      section#about div.image img,
+      section#contact div.image img {
         margin: 0; }
+  div.portWrapper {
+    padding: 1px 0 785px; }
   section.portfolio {
     max-width: 100%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-right: 0; }
     section.portfolio::after {
       clear: both;
       content: "";
       display: table; }
+    section.portfolio::after {
+      content: "";
+      display: block;
+      clear: both; }
     section.portfolio h2 {
       padding: 100px auto 0;
       display: block;
       text-align: center;
-      color: #F2B3BA; }
-    section.portfolio div.portfolio {
+      color: #F2B3BA;
+      margin: 0; }
+    section.portfolio div#portfolio {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%;
-      text-align: center; }
-      section.portfolio div.portfolio:last-child {
+      text-align: center;
+      margin-top: 0;
+      margin-left: 0; }
+      section.portfolio div#portfolio:last-child {
         margin-right: 0; }
-      section.portfolio div.portfolio article.show,
-      section.portfolio div.portfolio article.hide {
+      section.portfolio div#portfolio article.show,
+      section.portfolio div#portfolio article.hide {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%;
         width: 30%;
         margin-left: 90px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         border-radius: 10px; }
-        section.portfolio div.portfolio article.show:last-child,
-        section.portfolio div.portfolio article.hide:last-child {
+        section.portfolio div#portfolio article.show:last-child,
+        section.portfolio div#portfolio article.hide:last-child {
           margin-right: 0; }
-        section.portfolio div.portfolio article.show h2,
-        section.portfolio div.portfolio article.hide h2 {
+        section.portfolio div#portfolio article.show h2,
+        section.portfolio div#portfolio article.hide h2 {
           margin-top: 0px; }
-  div#parallax1 {
-    padding-bottom: 900px; } }
+      section.portfolio div#portfolio::after {
+        content: "";
+        clear: both;
+        display: block; }
+    section.portfolio section.blog#blog h2.blog {
+      text-align: center; }
+    section.portfolio section.blog#blog div#blog.blog {
+      margin: 0 auto;
+      padding-left: 30px;
+      width: 100%; }
+      section.portfolio section.blog#blog div#blog.blog iframe:nth-child(4) {
+        clear: none; }
+      section.portfolio section.blog#blog div#blog.blog iframe:nth-child(2n) {
+        margin-left: 40%; } }
 
-@media (max-width: 770px) {
-  header div.heading h1 {
+@media (max-width: 806px) {
+  header.header div.heading h1 {
     float: left;
     left: 50px;
     top: 65px;
     font-size: 2.3em; }
-  header nav {
-    left: 50px; }
-    header nav a {
+  header.header nav {
+    margin: 5px;
+    text-align: center; }
+    header.header nav a {
       font-size: 1em;
       border-top: 1px solid #A64A54;
       border-right: 1px solid #A64A54;
       width: 20px;
-      padding: 15px;
-      margin: 5px 0 0;
+      padding: 10px 5px;
+      margin: 0 0.75em 0 0;
       background: rgba(250, 250, 250, 0.3);
       border-radius: 10px; }
-      header nav a:hover {
-        width: 20px; }
+      header.header nav a:hover {
+        width: 20px;
+        padding: 10px 5px; }
+      header.header nav a:focus {
+        width: 20px;
+        padding: 10px 5px;
+        background: rgba(250, 250, 250, 0.5); }
   section.bio h2 {
     color: #A64A54;
     position: static; } }
@@ -582,52 +639,181 @@ section.blog {
     font-size: 1em; } }
 
 @media (max-width: 672px) {
-  header nav a {
-    float: none;
-    display: block;
-    width: 150%; }
-    header nav a:hover {
-      width: 150%; }
+  body header.header {
+    width: 100%;
+    float: right;
+    padding: 5px;
+    height: auto; }
+    body header.header nav.main {
+      display: none; }
+    body header.header nav.mobile {
+      width: 100%;
+      display: block; }
+      body header.header nav.mobile p.title {
+        display: none;
+        color: #F2B3BA;
+        float: left;
+        margin: 8px 5%;
+        text-transform: uppercase;
+        letter-spacing: 0.2em; }
+      body header.header nav.mobile button {
+        background: none;
+        color: #F2B3BA;
+        border: none;
+        font-size: 2em;
+        margin-right: 10px;
+        float: right;
+        text-align: right; }
+      body header.header nav.mobile p.menu {
+        float: right; }
+      body header.header nav.mobile p.menu span,
+      body header.header nav.mobile p.menu {
+        color: #F2B3BA;
+        display: inline-block;
+        text-align: right;
+        font-size: .8em;
+        margin: 0 10px;
+        font-weight: lighter; }
+      body header.header nav.mobile p.menu span {
+        font-family: 'Parisienne', cursive;
+        font-size: 2em;
+        margin: 0 5px; }
+      body header.header nav.mobile div {
+        display: none;
+        z-index: 888;
+        width: 100%;
+        background: #A64A54; }
+      body header.header nav.mobile a {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        border-radius: 0; }
+        body header.header nav.mobile a:hover {
+          width: 100%; }
+  body div.heading h1 {
+    margin-top: 0; }
   section.bio {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 48.82117%;
+    margin-top: 50px; }
     section.bio:last-child {
       margin-right: 0; }
     section.bio h2 {
       font-size: 1em;
-      margin-top: 170px; }
+      margin-top: 0px; }
     section.bio p {
       font-size: .85em; }
   section.portfolio div.portfolio article.show {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25%; }
+    width: 31.76157%; }
     section.portfolio div.portfolio article.show:last-child {
       margin-right: 0; }
   section.portfolio div.portfolio article.hide {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25%; }
+    width: 31.76157%; }
     section.portfolio div.portfolio article.hide:last-child {
       margin-right: 0; }
-  div#parallax1 {
-    padding-bottom: 2000px; } }
+  section.contact div.about {
+    margin-left: 5px; }
+  section.resume div.resume section.experience {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+    width: 100%;
+    float: none; }
+    section.resume div.resume section.experience:last-child {
+      margin-right: 0; }
+  section.resume div.resume section.contact,
+  section.resume div.resume section.skills,
+  section.resume div.resume section.education {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+    width: 100%;
+    float: none; }
+    section.resume div.resume section.contact:last-child,
+    section.resume div.resume section.skills:last-child,
+    section.resume div.resume section.education:last-child {
+      margin-right: 0; } }
 
-@media (max-width: 560px) {
+@media (max-width: 566px) {
   header div.heading h1 {
     font-size: 1.5em; }
   section.bio h2 {
     font-size: .8em; }
-  section#about div.image {
-    margin-left: 10%; } }
+  section#about article,
+  section#contact article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    border-radius: 1px;
+    margin-top: 0; }
+    section#about article:last-child,
+    section#contact article:last-child {
+      margin-right: 0; }
+    section#about article:nth-child(2n),
+    section#contact article:nth-child(2n) {
+      margin-left: 10%; }
+    section#about article:nth-child(6),
+    section#contact article:nth-child(6) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      section#about article:nth-child(6):last-child,
+      section#contact article:nth-child(6):last-child {
+        margin-right: 0; }
+  section#about div.image,
+  section#contact div.image {
+    margin-left: 10%; }
+  section.portfolio div#portfolio article.show {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin: 5px 15%; }
+    section.portfolio div#portfolio article.show:last-child {
+      margin-right: 0; }
+  section.portfolio div#portfolio article.hide {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin: auto; }
+    section.portfolio div#portfolio article.hide:last-child {
+      margin-right: 0; }
+  div.portWrapper {
+    padding-bottom: 1500px; }
+  section.blog div#blog iframe {
+    margin-left: 25%;
+    width: 50%; } }
 
 @media (max-width: 415px) {
+  body header.header nav.mobile p.title {
+    display: inline-block; }
+  body header.header nav.mobile p.menu {
+    display: none; }
+  div.wrapper {
+    padding-top: 80px; }
+  div.heading {
+    display: none; }
+  section.bio {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-top: 0; }
+    section.bio:last-child {
+      margin-right: 0; }
   section.about div.image img {
     width: 250px;
     height: auto; } }

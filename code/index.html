@@ -12,13 +12,26 @@
   </head>
   <body>
     <header class="header">
-      <nav>
+      <nav class="main">
         <a href="#about"> About</a>
         <a href="#resume"> Résumé</a>
         <a href="#portfolio"> Code</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
         <a href="https://melonandthemayhem.bandcamp.com" target="_blank">Music</a>
+      </nav>
+      <nav class="mobile">
+        <p class="title" id="title">Mary Ellen Klein</p>
+        <button class="fa fa-bars"></button>
+        <p class="menu"> <<span>menu</span>> </p>
+        <div>
+          <a href="#about"> About</a>
+          <a href="#resume"> Résumé</a>
+          <a href="#portfolio"> Code</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="https://melonandthemayhem.bandcamp.com" target="_blank">Music</a>
+        </div>
       </nav>
     </header>
     <div class="wrapper">
@@ -52,7 +65,7 @@
         </article>
         <article>
           <i class="fa fa-language"></i>
-          <p class="abtCap">Foreign Language</p>
+          <p class="abtCap">Japanese</p>
           <p class="about">I studied Japanese starting in fourth grade, and twelve years later I earned my B.A. in Japanese Language and Literature from the University of Georgia.
           </p>
         </article>
@@ -71,7 +84,6 @@
       </div>
       <div class="image">
         <img src="../images/about1.jpg" alt="headshot" />
-        <img src="http://chart.apis.google.com/chart?cht=p&chs=500x250&chdl=Yoga%7CCooking%7CSongwriting%7CRunning&chl=Yoga%7CCooking%7CSongwriting%7CRunning&chco=A64A54|892D38|F2B3BA|63111b,A64A54|892D38|F2B3BA|63111b&chp=0.436326388889&chtt=Interests&chts=A64A54,24&chd=t:20,20,40,20|20,20,40,20" />
       </div>
     </section>
 
@@ -140,7 +152,7 @@
             <li>Utilized version control (GitHub), used Agile project management system, collaborated in team setting</li>
           </ul>
           <h2>Account Coordinator</h2>
-          <a href="http://jmkandassoc.com" target="_blank"></a><p>JMK & Associates  |  Nashville, TN  |  2014-2015</p>
+          <a href="http://jmkandassoc.com" target="_blank"><p>JMK & Associates  |  Nashville, TN  |  2014-2015</p></a>
           <ul>
             <li>Communicated with clients, interviewed sources, wrote story content</li>
             <li>Increased article placement rate by 200% in 9 months</li>
@@ -198,8 +210,8 @@
       </div>
     </section>
 
-    <section class="blog">
-      <h2>< <span>blog</span> ></h2>
+    <section class="blog" id="blog">
+      <h2 class="blog">< <span>blog</span> ></h2>
       <div class="blog" id="blog">
         <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/putting-my-money-where-my-mouse-is-cd100b357f72" target="_blank">Putting My Money Where My Mouse Is</a>
         <a class="m-story" data-collapsed="true" href="https://medium.com/@maryellenklein/backbone-js-assembling-a-spine-5b8d04b98c18" target="_blank">Backbone.js: Assembling a Spine</a>
@@ -213,27 +225,28 @@
     <section id="contact" class="about contact">
       <div class="about">
         <h2>< <span>contact</span> ></h2>
-        <article>
+        <article class="twitter">
           <i class="fa fa-twitter"></i>
           <p class="abtCap">Follow</p>
           <p class="about low"><a href="http://www.twitter.com/mellenklein" target="_blank">@mellenklein</a></p>
+          <a class="twitter-timeline" href="https://twitter.com/mellenklein" data-widget-id="680914539177721856">Tweets by @mellenklein</a>
         </article>
         <article class="blog">
           <i class="fa fa-envelope"></i>
           <p class="abtCap">Email</p>
-          <p class="about low"><a href="mailto:maryellenklein" target="_blank">maryellenklein@gmail.com</a></p>
+          <p class="about low"><a href="mailto:maryellenklein" target="_blank">maryellenklein @gmail.com</a></p>
         </article>
         <article>
           <i class="fa fa-mobile"></i>
           <p class="abtCap">Call</p>
           <p class="about low"><a href="tel:4046256102" target="_blank">(404) 625-6102</a></p>
         </article>
-        <article>
+        <article class="linkedin">
           <i class="fa fa-linkedin"></i>
           <p class="abtCap">Connect</p>
-          <p class="about low"><a href="http://linkedin.com/users/maryellenklein" target="_blank">Mary Ellen Klein</a></p>
+          <p class="about low"><a href="https://www.linkedin.com/in/maryellenklein" target="_blank">Mary Ellen Klein</a></p>
         </article>
-        <article>
+        <article class="github">
           <i class="fa fa-code"></i>
           <p class="abtCap">GitHub</p>
           <p class="about low"><a href="http://github.com/mellenklein" target="_blank">/mellenklein</a></p>
@@ -242,6 +255,9 @@
     </section>
 
     <script async src="https://static.medium.com/embed.js"></script>
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/maryellenklein" data-format="inline" data-related="false"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
