@@ -150,8 +150,7 @@ section.about {
         padding-top: 80px;
         font-weight: lighter; }
       section.about div.about article p.about,
-      section.about div.about article iframe#twitter-widget-0,
-      section.about div.about article span.IN-widget {
+      section.about div.about article iframe#twitter-widget-0 {
         display: none; }
       section.about div.about article a {
         text-decoration: none;
@@ -162,8 +161,7 @@ section.about {
         opacity: 0.8;
         cursor: default; }
         section.about div.about article:hover p.about,
-        section.about div.about article:hover iframe#twitter-widget-0,
-        section.about div.about article:hover span.IN-widget {
+        section.about div.about article:hover iframe#twitter-widget-0 {
           display: block;
           margin-top: 10px; }
         section.about div.about article:hover .fa,
@@ -173,17 +171,21 @@ section.about {
       padding-bottom: 100px; }
     section.about div.about article.twitter p.about.low {
       padding-top: 0; }
+    section.about div.about article.blog {
+      background-image: none; }
+      section.about div.about article.blog:hover {
+        background: white url("https://i.gyazo.com/df4c328c279ae9a6f45d10880b6585cb.gif") repeat-x left center;
+        background-size: cover; }
     section.about div.about article.linkedin {
-      overflow: hidden; }
-      section.about div.about article.linkedin p.abtCap {
-        padding-bottom: 100px; }
-      section.about div.about article.linkedin p.about.low {
-        padding-top: 0; }
+      background-image: none; }
+      section.about div.about article.linkedin:hover {
+        background: white url("https://i.gyazo.com/4e0e5645df0f01867b9bd9fef15a761d.gif") repeat-x left center;
+        background-size: cover; }
     section.about div.about article.github {
       background-image: none; }
       section.about div.about article.github:hover {
-        background: rgba(250, 250, 250, 0.8) url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x center center;
-        background-size: contain; }
+        background: rgba(250, 250, 250, 0.8) url("https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif") repeat-x left center;
+        background-size: cover; }
   section.about div.image {
     float: left;
     display: block;
@@ -661,7 +663,8 @@ section.blog {
         display: none;
         color: #F2B3BA;
         float: left;
-        margin: 8px 5%;
+        margin: 10px 5px;
+        font-size: 0.8em;
         text-transform: uppercase;
         letter-spacing: 0.2em; }
       body header.header nav.mobile button {
@@ -669,7 +672,7 @@ section.blog {
         color: #F2B3BA;
         border: none;
         font-size: 2em;
-        margin-right: 10px;
+        margin-right: 0px;
         float: right;
         text-align: right; }
       body header.header nav.mobile p.menu {
@@ -802,12 +805,18 @@ section.blog {
   div.portWrapper {
     padding-bottom: 1500px; }
   section.blog div#blog iframe {
-    margin-left: 25%;
-    width: 50%; } }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    display: block; }
+    section.blog div#blog iframe:last-child {
+      margin-right: 0; } }
 
 @media (max-width: 415px) {
   body header.header nav.mobile p.title {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 0.75em; }
   body header.header nav.mobile p.menu {
     display: none; }
   div.wrapper {
@@ -819,9 +828,19 @@ section.blog {
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%;
-    margin-top: 0; }
+    margin-top: 0;
+    padding-left: 8px; }
     section.bio:last-child {
       margin-right: 0; }
   section.about div.image img {
     width: 250px;
-    height: auto; } }
+    height: auto; }
+  section.resume#resume section.experience,
+  section.resume#resume section.skills {
+    padding-right: 0; }
+    section.resume#resume section.experience h3,
+    section.resume#resume section.skills h3 {
+      text-align: center; }
+    section.resume#resume section.experience ul.contact,
+    section.resume#resume section.skills ul.contact {
+      padding-left: 0; } }

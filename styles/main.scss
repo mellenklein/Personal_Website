@@ -135,8 +135,7 @@ section.about {
         font-weight: lighter;
       }
       p.about,
-      iframe#twitter-widget-0,
-      span.IN-widget {
+      iframe#twitter-widget-0 {
         display: none;
       }
       a {
@@ -149,8 +148,7 @@ section.about {
         opacity: 0.8;
         cursor: default;
         p.about,
-        iframe#twitter-widget-0,
-        span.IN-widget {
+        iframe#twitter-widget-0 {
           display: block;
           margin-top: 10px;
         }
@@ -168,24 +166,26 @@ section.about {
         padding-top: 0;
       }
     }
-    // article.blog {
-    //   overflow:visible;
-    // }
-    article.linkedin {
-      overflow: hidden;
-      p.abtCap {
-        padding-bottom: 100px;
+    article.blog {
+      background-image: none;
+      &:hover {
+        background: white url('https://i.gyazo.com/df4c328c279ae9a6f45d10880b6585cb.gif') repeat-x left center;
+        background-size: cover;
       }
-      p.about.low {
-        padding-top: 0;
+    }
+    article.linkedin {
+      background-image: none;
+      &:hover {
+        background: white url('https://i.gyazo.com/4e0e5645df0f01867b9bd9fef15a761d.gif') repeat-x left center;
+        background-size:cover;
       }
     }
     article.github {
       // background: $blush;
       background-image: none;
       &:hover {
-        background: rgba(250,250,250,0.8) url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x center center;
-        background-size: contain;
+        background: rgba(250,250,250,0.8) url('https://i.gyazo.com/88d15dabc529f4ea2e1c17ddcaf82cd6.gif') repeat-x left center;
+        background-size:cover;
       }
     }
   }
@@ -713,7 +713,8 @@ body {
         display: none;
         color: $blush;
         float: left;
-        margin: 8px 5%;
+        margin: 10px 5px;
+        font-size: 0.8em;
         text-transform: uppercase;
         letter-spacing: 0.2em;
       }
@@ -722,7 +723,7 @@ body {
         color: $blush;
         border: none;
         font-size: 2em;
-        margin-right: 10px;
+        margin-right: 0px;
         float: right;
         text-align: right;
       }
@@ -844,8 +845,10 @@ body {
     padding-bottom: 1500px;
   }
   section.blog div#blog iframe {
-    margin-left: 25%;
-    width: 50%;
+    @include span-columns(7 of 12);
+    // text-align: center;
+    display: block;
+    // margin: 5px auto;
   }
 }
 
@@ -855,6 +858,7 @@ body {
       nav.mobile {
         p.title {
           display: inline-block;
+          font-size: 0.75em;
         }
         p.menu {
           display: none;
@@ -871,12 +875,25 @@ body {
   section.bio {
     @include span-columns(7 of 12);
     margin-top: 0;
+    padding-left: 8px;
   }
   section.about {
     div.image {
       img {
         width: 250px;
         height: auto;
+      }
+    }
+  }
+  section.resume#resume {
+    section.experience,
+    section.skills {
+      padding-right: 0;
+      h3 {
+        text-align: center;
+      }
+      ul.contact {
+        padding-left: 0;
       }
     }
   }
