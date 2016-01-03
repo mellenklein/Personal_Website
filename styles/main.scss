@@ -3,6 +3,12 @@
 @import "variables";
 @import "../code/bower_components/neat/app/assets/stylesheets/neat";
 
+
+@media print {
+  section.resume {
+    display: block;
+  }
+}
 body {
   background: $carnation;
   font-family: 'Montserrat', sans-serif;
@@ -103,6 +109,11 @@ section.about {
     @include span-columns(11);
     margin: 30px 50px 0;
     // text-align: center;
+    // div.scroll {
+    //   height: 250px;
+    //   overflow: hidden;
+    //   margin-bottom: 20px;
+    // }
     article {
       @include span-columns(2.6);
       margin: 30px 0;
@@ -112,8 +123,10 @@ section.about {
       opacity: .8;
       text-align: center;
       height: 250px;
+      // height: 99%;
+      overflow: auto;
+      padding-right: 15px;
       transition: display .5s ease-in-out;
-      overflow: scroll;
       color: $carnation;
       position:relative;
       box-shadow:0 1px 4px rgba(166, 74, 84, 0.3), 0 0 40px rgba(166, 74, 84, 0.1) inset;
@@ -363,6 +376,21 @@ section.resume {
     color: $rosewood;
     margin-left: 30px;
   }
+  a.printBtn {
+    text-decoration: none;
+    color: $blush;
+    background: $carnation;
+    border: 1px solid $merlot;
+    border-radius: 1px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: .2;
+    float: right;
+    margin-right: 9%;
+    &:hover {
+      opacity: .8;
+    }
+  }
   div.resume {
     @include span-columns(10 of 12);
     margin: 5% 8%;
@@ -392,6 +420,9 @@ section.resume {
     a {
       text-decoration: none;
       color: $carnation;
+    }
+    div.contactSocial {
+      float: right;
     }
     ul.contact {
       li {
@@ -456,6 +487,10 @@ section.resume {
       .info {
         color: $rosewood;
         font-size: 1em;
+      }
+      .info.year {
+        font-size: .8em;
+        font-style: italic;
       }
     }
   }
@@ -537,6 +572,14 @@ section#resume {
     }
   }
  }
+}
+
+section#contact.contact {
+  div.about {
+    article {
+      overflow: hidden;
+    }
+  }
 }
 
 @media (max-width: 935px) {

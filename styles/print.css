@@ -1,0 +1,154 @@
+@import url(../code/bower_components/normalize-css/normalize.css);
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  /*background: #A64A54;*/
+  font-family: 'Montserrat', sans-serif; }
+
+.mobile {
+  display: none; }
+
+header.header {
+  display: none; }
+
+div.wrapper {
+  display: none; }
+
+main {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+div.heading {
+  display: none; }
+
+section.bio {
+  display: none; }
+
+section.about {
+  display: none; }
+
+div.portWrapper {
+  display: none; }
+
+section.portfolio {
+  display: none; }
+
+section.resume {
+  float: left;
+  display: block;
+  width: 100%; }
+  section.resume:last-child {
+    margin-right: 0; }
+  section.resume span {
+    display: none;}
+  section.resume a.printBtn {
+    display: none; }
+  section.resume div.resume {
+    float: left;
+    display: block;
+    width: 90%;
+    margin: 0 0 0 3%;
+    color: #63111b;
+    /*border: 1px solid #A64A54;*/
+    background: white;
+    opacity: 0.75;
+    padding: 0;}
+    section.resume div.resume:last-child {
+      margin-right: 0; }
+    section.resume div.resume h1 {
+      color: #63111b;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 10px;
+      float: left; }
+    section.resume div.resume h2 {
+      display: inline-block;
+      float: left;
+      margin: 5px 0 0 10px;
+      font-weight: 200; }
+    section.resume div.resume p {
+      font-size: 0.8em;
+      margin: 5px 0 5px;
+      clear: left; }
+    section.resume div.resume p.contact.address {
+      border-top: 5px solid #A64A54;
+      padding-top: 10px;
+    }
+    section.resume div.resume a {
+      text-decoration: none;
+      color: #A64A54; }
+    section.resume div.resume ul.contact li {
+      float: none;
+      width: 100%; }
+      section.resume div.resume ul.contact li a {
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 5px;
+        text-decoration: none;
+        color: #A64A54; }
+    section.resume div.resume h3 {
+      text-transform: uppercase;
+      font-weight: lighter;
+      font-size: 1.3em;
+      margin-bottom: 10px; }
+    section.resume div.resume div.content {
+      margin-top: 0; }
+    section.resume div.resume section.experience {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 58.86297%;
+      padding-right: 35px; }
+      section.resume div.resume section.experience:last-child {
+        margin-right: 0; }
+      section.resume div.resume section.experience h2 {
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-top: 20px;
+        font-weight: bold; }
+      section.resume div.resume section.experience p {
+        margin: 10px 0;
+        font-weight: 200; }
+      section.resume div.resume section.experience ul {
+        margin: 0;
+        padding: 0 15px; }
+        section.resume div.resume section.experience ul li {
+          color: #A64A54;
+          font-size: .9em; }
+    section.resume div.resume section.skills {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 38.29445%; }
+      section.resume div.resume section.skills:last-child {
+        margin-right: 0; }
+      section.resume div.resume section.skills ul {
+        margin: 0;
+        padding: 0 15px; }
+        section.resume div.resume section.skills ul li {
+          color: #A64A54; }
+      section.resume div.resume section.skills p {
+        color: #A64A54;
+        font-size: .8em; }
+      section.resume div.resume section.skills .info {
+        color: #63111b;
+        font-size: 1em; }
+      section.resume div.resume section.skills .info.year {
+        font-size: .8em;
+        font-style: italic;
+      }
+
+section.blog {
+  display: none; }

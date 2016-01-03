@@ -7,6 +7,10 @@ html {
 *::before {
   box-sizing: inherit; }
 
+@media print {
+  section.resume {
+    display: block; } }
+
 body {
   background: #A64A54;
   font-family: 'Montserrat', sans-serif; }
@@ -130,8 +134,9 @@ section.about {
       opacity: .8;
       text-align: center;
       height: 250px;
+      overflow: auto;
+      padding-right: 15px;
       transition: display 0.5s ease-in-out;
-      overflow: scroll;
       color: #A64A54;
       position: relative;
       box-shadow: 0 1px 4px rgba(166, 74, 84, 0.3), 0 0 40px rgba(166, 74, 84, 0.1) inset; }
@@ -337,6 +342,19 @@ section.resume {
     font-size: 2em;
     color: #63111b;
     margin-left: 30px; }
+  section.resume a.printBtn {
+    text-decoration: none;
+    color: #F2B3BA;
+    background: #A64A54;
+    border: 1px solid #892D38;
+    border-radius: 1px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: .2;
+    float: right;
+    margin-right: 9%; }
+    section.resume a.printBtn:hover {
+      opacity: .8; }
   section.resume div.resume {
     float: left;
     display: block;
@@ -368,6 +386,8 @@ section.resume {
     section.resume div.resume a {
       text-decoration: none;
       color: #A64A54; }
+    section.resume div.resume div.contactSocial {
+      float: right; }
     section.resume div.resume ul.contact li {
       float: none;
       width: 100%; }
@@ -423,6 +443,9 @@ section.resume {
       section.resume div.resume section.skills .info {
         color: #63111b;
         font-size: 1em; }
+      section.resume div.resume section.skills .info.year {
+        font-size: .8em;
+        font-style: italic; }
 
 section.blog {
   float: left;
@@ -512,6 +535,9 @@ section.blog {
       text-align: center; }
     section#resume div.resume p.info {
       font-size: .94em; } }
+
+section#contact.contact div.about article {
+  overflow: hidden; }
 
 @media (max-width: 935px) {
   section.bio h2 {
