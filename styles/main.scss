@@ -306,7 +306,7 @@ section.portfolio {
       // background: $coral;
       background-size: 100%;
     }
-    article.show#tshirt {
+    article.show#gigstart {
       // background: $camel;
       background-size: 100%;
     }
@@ -336,8 +336,8 @@ section.portfolio {
         }
       }
     }
-    article.hide#twt {
-      background: $sky url('https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif') repeat-x center center;
+    article.hide#gigstart {
+      background: $lilac url('https://i.gyazo.com/c728e38cddfe6688758f0d37a61e196f.gif') repeat-x center center;
       background-size: contain;
     }
     article.hide#todo {
@@ -358,8 +358,8 @@ section.portfolio {
       background: $coral url('http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif') repeat-x center center;
       background-size: contain;
     }
-    article.hide#tshirt {
-      background: $camel url('../images/tshirt.png') repeat-x center center;
+    article.hide#twt {
+      background: $sky url('https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif') repeat-x center center;
       background-size: contain;
     }
   }
@@ -876,20 +876,16 @@ body {
       margin-left: 10%;
     }
   }
-  section.portfolio div#portfolio article.show {
-    @include span-columns(8 of 12);
-    margin: 5px 15%;
-  }
+  section.portfolio div#portfolio article.show,
   section.portfolio div#portfolio article.hide {
     @include span-columns(8 of 12);
-    margin: auto;
+    margin: 5px 15%;
   }
   div.portWrapper {
     padding-bottom: 1500px;
   }
   section.blog div#blog iframe {
     @include span-columns(7 of 12);
-    // text-align: center;
     display: block;
     // margin: 5px auto;
   }

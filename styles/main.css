@@ -285,7 +285,7 @@ section.portfolio {
       background-size: 100%; }
     section.portfolio div.portfolio article.show#sk8 {
       background-size: 100%; }
-    section.portfolio div.portfolio article.show#tshirt {
+    section.portfolio div.portfolio article.show#gigstart {
       background-size: 100%; }
     section.portfolio div.portfolio article.hide {
       height: 240px;
@@ -306,8 +306,8 @@ section.portfolio {
             color: white;
             cursor: pointer;
             transition: color 0.5s ease; }
-    section.portfolio div.portfolio article.hide#twt {
-      background: #55ACEE url("https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif") repeat-x center center;
+    section.portfolio div.portfolio article.hide#gigstart {
+      background: #9F6CD1 url("https://i.gyazo.com/c728e38cddfe6688758f0d37a61e196f.gif") repeat-x center center;
       background-size: contain; }
     section.portfolio div.portfolio article.hide#todo {
       background: #8DC785 url("https://i.gyazo.com/ebd53747dec76a16392cd9d573108c94.gif") repeat-x center center;
@@ -323,8 +323,8 @@ section.portfolio {
     section.portfolio div.portfolio article.hide#sk8 {
       background: #CB7461 url("http://cdn.makeagif.com/media/11-29-2015/l6zBGp.gif") repeat-x center center;
       background-size: contain; }
-    section.portfolio div.portfolio article.hide#tshirt {
-      background: #B39E77 url("../images/tshirt.png") repeat-x center center;
+    section.portfolio div.portfolio article.hide#twt {
+      background: #55ACEE url("https://i.gyazo.com/b2614797a77b02d3edd35f9991564895.gif") repeat-x center center;
       background-size: contain; }
 
 section.resume {
@@ -812,20 +812,14 @@ section#contact.contact div.about article {
   section#about div.image,
   section#contact div.image {
     margin-left: 10%; }
-  section.portfolio div#portfolio article.show {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin: 5px 15%; }
-    section.portfolio div#portfolio article.show:last-child {
-      margin-right: 0; }
+  section.portfolio div#portfolio article.show,
   section.portfolio div#portfolio article.hide {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
-    margin: auto; }
+    margin: 5px 15%; }
+    section.portfolio div#portfolio article.show:last-child,
     section.portfolio div#portfolio article.hide:last-child {
       margin-right: 0; }
   div.portWrapper {

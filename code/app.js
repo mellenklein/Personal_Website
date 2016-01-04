@@ -28,3 +28,7 @@ $('article a').click(function() {
 $('button').click(function() {
   $(this).siblings('div').slideToggle();
 });
+
+$('.mobileLink').click(function() {
+  $(this).parent('div').slideToggle();
+});
