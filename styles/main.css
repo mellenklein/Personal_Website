@@ -342,29 +342,37 @@ section.resume {
     font-size: 2em;
     color: #63111b;
     margin-left: 30px; }
-  section.resume a.printBtn {
-    text-decoration: none;
-    color: #F2B3BA;
-    background: #A64A54;
-    border: 1px solid #892D38;
-    border-radius: 1px;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    letter-spacing: .2;
-    float: right;
-    margin-right: 9%; }
-    section.resume a.printBtn:hover {
-      opacity: .8; }
+  section.resume section.skillsBox {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin: 5%;
+    height: auto;
+    margin-right: 30px;
+    padding: 10px;
+    background: #F8D9DC; }
+    section.resume section.skillsBox:last-child {
+      margin-right: 0; }
+    section.resume section.skillsBox h3 {
+      color: #63111b;
+      display: block;
+      margin: 30px 0 0 30px;
+      font-weight: 200;
+      text-transform: uppercase; }
+    section.resume section.skillsBox ul {
+      width: 90%; }
+      section.resume section.skillsBox ul li {
+        color: #A64A54;
+        font-size: 1.2em; }
   section.resume div.resume {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 82.94039%;
-    margin: 5% 8%;
+    width: 48.82117%;
+    margin: 5% 0 5% 8%;
     color: #63111b;
-    border: 1px solid #A64A54;
-    background: white;
-    opacity: 0.75;
+    background: #F8D9DC;
     padding: 25px 50px; }
     section.resume div.resume:last-child {
       margin-right: 0; }
@@ -373,12 +381,44 @@ section.resume {
       font-size: 2.4em;
       text-transform: uppercase;
       display: inline-block;
+      display: none;
       float: left; }
     section.resume div.resume h2 {
       display: inline-block;
+      display: none;
       float: left;
       margin: 38px 0 0 30px;
       font-weight: 200; }
+    section.resume div.resume p.contact {
+      display: none; }
+    section.resume div.resume div.bullets {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      section.resume div.resume div.bullets:last-child {
+        margin-right: 0; }
+      section.resume div.resume div.bullets a.printBtn {
+        text-decoration: none;
+        color: #F2B3BA;
+        background: #A64A54;
+        border: 1px solid #892D38;
+        border-radius: 1px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        letter-spacing: .2;
+        float: right;
+        margin: 0px 5% 20px; }
+        section.resume div.resume div.bullets a.printBtn:hover {
+          opacity: .8; }
+      section.resume div.resume div.bullets p {
+        font-size: 1.2em;
+        margin: 30px auto;
+        clear: both; }
+        section.resume div.resume div.bullets p span.year {
+          font-size: .8em;
+          font-style: italic;
+          font-family: 'Montserrat', sans-serif; }
     section.resume div.resume p {
       font-size: 0.8em;
       margin: 5px;
@@ -402,6 +442,7 @@ section.resume {
       font-size: 1.3em;
       margin-bottom: 10px; }
     section.resume div.resume div.content {
+      display: none;
       margin-top: 60px; }
     section.resume div.resume section.experience {
       float: left;
@@ -525,11 +566,11 @@ section.blog {
     section#resume div.resume h1 {
       text-align: center;
       float: none;
-      display: block; }
+      display: none; }
     section#resume div.resume h2.resumeTitle {
       float: none;
       margin: 0 auto;
-      display: block;
+      display: none;
       text-align: center; }
     section#resume div.resume p.contact {
       text-align: center; }
@@ -758,28 +799,27 @@ section#contact.contact div.about article {
       margin-right: 0; }
   section.contact div.about {
     margin-left: 5px; }
-  section.resume div.resume section.experience {
+  section.resume div.resume {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 91.4702%;
-    width: 100%;
-    float: none; }
-    section.resume div.resume section.experience:last-child {
+    margin: 8% 5%; }
+    section.resume div.resume:last-child {
       margin-right: 0; }
-  section.resume div.resume section.contact,
-  section.resume div.resume section.skills,
-  section.resume div.resume section.education {
+  section.resume section.skillsBox {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 91.4702%;
-    width: 100%;
-    float: none; }
-    section.resume div.resume section.contact:last-child,
-    section.resume div.resume section.skills:last-child,
-    section.resume div.resume section.education:last-child {
-      margin-right: 0; } }
+    text-align: center; }
+    section.resume section.skillsBox:last-child {
+      margin-right: 0; }
+    section.resume section.skillsBox h3 {
+      margin: 30px auto 0;
+      font-size: 1.5em; }
+    section.resume section.skillsBox ul {
+      list-style-type: none; } }
 
 @media (max-width: 566px) {
   header div.heading h1 {

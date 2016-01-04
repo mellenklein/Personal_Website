@@ -376,41 +376,81 @@ section.resume {
     color: $rosewood;
     margin-left: 30px;
   }
-  a.printBtn {
-    text-decoration: none;
-    color: $blush;
-    background: $carnation;
-    border: 1px solid $merlot;
-    border-radius: 1px;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    letter-spacing: .2;
-    float: right;
-    margin-right: 9%;
-    &:hover {
-      opacity: .8;
+  section.skillsBox {
+    @include span-columns(4 of 12);
+    margin: 5%;
+    height: auto;
+    margin-right: 30px;
+    padding: 10px;
+    background: $lightPink;
+    h3 {
+      color: $rosewood;
+      display: block;
+      margin: 30px 0 0 30px;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    ul {
+      width: 90%;
+      li {
+        color: $carnation;
+        font-size: 1.2em;
+      }
     }
   }
   div.resume {
-    @include span-columns(10 of 12);
-    margin: 5% 8%;
+    @include span-columns(6 of 12);
+    margin: 5% 0 5% 8%;
     color: $rosewood;
-    border: 1px solid $carnation;
-    background: white;
-    opacity: 0.75;
+    background: $lightPink;
     padding: 25px 50px;
     h1 {
       color: $rosewood;
       font-size: 2.4em;
       text-transform: uppercase;
       display: inline-block;
+      display: none;
       float:left;
     }
     h2 {
       display: inline-block;
+      display: none;
       float:left;
       margin: 38px 0 0 30px;
       font-weight: 200;
+    }
+    p.contact {
+      display: none;
+    }
+    div.bullets {
+      @include span-columns(12);
+      // background: white;
+      // margin-top: 50px;
+      a.printBtn {
+        text-decoration: none;
+        color: $blush;
+        background: $carnation;
+        border: 1px solid $merlot;
+        border-radius: 1px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        letter-spacing: .2;
+        float: right;
+        margin: 0px 5% 20px;
+        &:hover {
+          opacity: .8;
+        }
+      }
+      p {
+        font-size: 1.2em;
+        margin: 30px auto;
+        clear:both;
+        span.year {
+          font-size: .8em;
+          font-style: italic;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
     }
     p {
       font-size: 0.8em;
@@ -443,6 +483,7 @@ section.resume {
       margin-bottom: 10px;
     }
     div.content {
+      display: none;
       margin-top: 60px;
     }
     section.experience {
@@ -556,12 +597,12 @@ section#resume {
     h1 {
       text-align: center;
       float: none;
-      display: block;
+      display: none;
     }
     h2.resumeTitle {
       float: none;
       margin: 0 auto;
-      display: block;
+      display: none;
       text-align: center;
     }
     p.contact {
@@ -743,15 +784,12 @@ body {
     float: right;
     padding: 5px;
     height: auto;
-    // background: none;
     nav.main {
       display: none;
     }
     nav.mobile {
       width: 100%;
       display: block;
-      // float: right;
-      // text-align: right;
       p.title {
         display: none;
         color: $blush;
@@ -834,17 +872,18 @@ body {
   }
   section.resume {
     div.resume {
-      section.experience {
-        @include span-columns(11 of 12);
-        width: 100%;
-        float: none;
+      @include span-columns(11);
+      margin: 8% 5%;
+    }
+    section.skillsBox {
+      @include span-columns(11);
+      text-align: center;
+      h3 {
+        margin: 30px auto 0;
+        font-size: 1.5em;
       }
-      section.contact,
-      section.skills,
-      section.education {
-        @include span-columns(11 of 12);
-        width: 100%;
-        float: none;
+      ul {
+        list-style-type: none;
       }
     }
   }
